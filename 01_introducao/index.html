@@ -1,0 +1,1812 @@
+
+
+
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Material para cursos de programação e análise de dados">
+      
+      
+        <link rel="canonical" href="https://p4husp.github.io/material-bio/01_introducao/">
+      
+      
+        <meta name="author" content="P4H">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copiar para área de transferência">
+      
+        <meta name="lang:clipboard.copied" content="Copiado para área de transferência">
+      
+        <meta name="lang:search.language" content="en, pt">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="Nenhum resultado encontrado">
+      
+        <meta name="lang:search.result.one" content="1 resultado encontrado">
+      
+        <meta name="lang:search.result.other" content="# resultados encontrados">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.0">
+    
+    
+      
+        <title>01 introducao - P4H - Material</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.0284f74d.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.01803549.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#introducao-ao-r-e-ao-rstudio" tabindex="1" class="md-skip">
+        Ir para o conteúdo
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://p4husp.github.io/material-bio/" title="P4H - Material" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              P4H - Material
+            </span>
+            <span class="md-header-nav__topic">
+              
+                01 introducao
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Digite para iniciar a busca
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/p4hUSP/material-bio/" title="Ir ao repositório" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    p4husp/material-bio
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://p4husp.github.io/material-bio/" title="P4H - Material" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    P4H - Material
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/p4hUSP/material-bio/" title="Ir ao repositório" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    p4husp/material-bio
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Material de Biologia" class="md-nav__link">
+      Material de Biologia
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        01 introducao
+      </label>
+    
+    <a href="./" title="01 introducao" class="md-nav__link md-nav__link--active">
+      01 introducao
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Índice</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-o-que-e-o-r-e-o-rstudio" title="1. O que é o R e o RStudio?" class="md-nav__link">
+    1. O que é o R e o RStudio?
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-linguagem-de-programacao-r" title="1.1. Linguagem de programação R" class="md-nav__link">
+    1.1. Linguagem de programação R
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-rstudio" title="1.1. RStudio" class="md-nav__link">
+    1.1. RStudio
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#abrindo-um-script" title="Abrindo um script" class="md-nav__link">
+    Abrindo um script
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algumas-regras-de-boa-conduta" title="Algumas regras de boa conduta" class="md-nav__link">
+    Algumas regras de boa conduta
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nossas-primeiras-linhas-de-codigo" title="Nossas primeiras linhas de código" class="md-nav__link">
+    Nossas primeiras linhas de código
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetos-e-atribuicoes-i" title="Objetos e atribuições I" class="md-nav__link">
+    Objetos e atribuições I
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#atribuindo-valores-a-variaveis-lt-" title="Atribuindo valores à variáveis (&lt;-)" class="md-nav__link">
+    Atribuindo valores à variáveis (&lt;-)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-dados" title="Tipos de dados" class="md-nav__link">
+    Tipos de dados
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lidando-com-numeros" title="Lidando com números" class="md-nav__link">
+    Lidando com números
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lidando-com-texto" title="Lidando com texto" class="md-nav__link">
+    Lidando com texto
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lidando-com-fatores" title="Lidando com fatores" class="md-nav__link">
+    Lidando com fatores
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lidando-com-data-e-tempo" title="Lidando com data e tempo" class="md-nav__link">
+    Lidando com data e tempo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lidando-com-logicosbooleanos" title="Lidando com lógicos/booleanos" class="md-nav__link">
+    Lidando com lógicos/booleanos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#valores-ausentes-missings" title="Valores ausentes/ missings" class="md-nav__link">
+    Valores ausentes/ missings
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercicios" title="Exercícios" class="md-nav__link">
+    Exercícios
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parte-a-tipos-de-dados" title="Parte A: Tipos de dados" class="md-nav__link">
+    Parte A: Tipos de dados
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estrutura-de-dados" title="Estrutura de dados" class="md-nav__link">
+    Estrutura de dados
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vetores-atomicos" title="Vetores (atômicos)" class="md-nav__link">
+    Vetores (atômicos)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#indexando-vetores" title="Indexando vetores" class="md-nav__link">
+    Indexando vetores
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listas" title="Listas" class="md-nav__link">
+    Listas
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#indexando" title="Indexando" class="md-nav__link">
+    Indexando
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dataframes" title="Dataframes" class="md-nav__link">
+    Dataframes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dataframes_1" title="Dataframes" class="md-nav__link">
+    Dataframes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#indexando_1" title="Indexando" class="md-nav__link">
+    Indexando
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercicio-1" title="Exercício 1" class="md-nav__link">
+    Exercício 1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercicio-2" title="Exercício 2" class="md-nav__link">
+    Exercício 2
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funcoes" title="Funções" class="md-nav__link">
+    Funções
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pacotes" title="Pacotes" class="md-nav__link">
+    Pacotes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#controladores-de-fluxo" title="Controladores de Fluxo" class="md-nav__link">
+    Controladores de Fluxo
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ifelse" title="if/else" class="md-nav__link">
+    if/else
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for" title="for" class="md-nav__link">
+    for
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../01_visualizacao/" title="Visualização de Dados" class="md-nav__link">
+      Visualização de Dados
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../02_transformar/" title="Transformar" class="md-nav__link">
+      Transformar
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Índice</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-o-que-e-o-r-e-o-rstudio" title="1. O que é o R e o RStudio?" class="md-nav__link">
+    1. O que é o R e o RStudio?
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-linguagem-de-programacao-r" title="1.1. Linguagem de programação R" class="md-nav__link">
+    1.1. Linguagem de programação R
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-rstudio" title="1.1. RStudio" class="md-nav__link">
+    1.1. RStudio
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#abrindo-um-script" title="Abrindo um script" class="md-nav__link">
+    Abrindo um script
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algumas-regras-de-boa-conduta" title="Algumas regras de boa conduta" class="md-nav__link">
+    Algumas regras de boa conduta
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nossas-primeiras-linhas-de-codigo" title="Nossas primeiras linhas de código" class="md-nav__link">
+    Nossas primeiras linhas de código
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetos-e-atribuicoes-i" title="Objetos e atribuições I" class="md-nav__link">
+    Objetos e atribuições I
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#atribuindo-valores-a-variaveis-lt-" title="Atribuindo valores à variáveis (&lt;-)" class="md-nav__link">
+    Atribuindo valores à variáveis (&lt;-)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-dados" title="Tipos de dados" class="md-nav__link">
+    Tipos de dados
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lidando-com-numeros" title="Lidando com números" class="md-nav__link">
+    Lidando com números
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lidando-com-texto" title="Lidando com texto" class="md-nav__link">
+    Lidando com texto
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lidando-com-fatores" title="Lidando com fatores" class="md-nav__link">
+    Lidando com fatores
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lidando-com-data-e-tempo" title="Lidando com data e tempo" class="md-nav__link">
+    Lidando com data e tempo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lidando-com-logicosbooleanos" title="Lidando com lógicos/booleanos" class="md-nav__link">
+    Lidando com lógicos/booleanos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#valores-ausentes-missings" title="Valores ausentes/ missings" class="md-nav__link">
+    Valores ausentes/ missings
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercicios" title="Exercícios" class="md-nav__link">
+    Exercícios
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parte-a-tipos-de-dados" title="Parte A: Tipos de dados" class="md-nav__link">
+    Parte A: Tipos de dados
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estrutura-de-dados" title="Estrutura de dados" class="md-nav__link">
+    Estrutura de dados
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vetores-atomicos" title="Vetores (atômicos)" class="md-nav__link">
+    Vetores (atômicos)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#indexando-vetores" title="Indexando vetores" class="md-nav__link">
+    Indexando vetores
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listas" title="Listas" class="md-nav__link">
+    Listas
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#indexando" title="Indexando" class="md-nav__link">
+    Indexando
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dataframes" title="Dataframes" class="md-nav__link">
+    Dataframes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dataframes_1" title="Dataframes" class="md-nav__link">
+    Dataframes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#indexando_1" title="Indexando" class="md-nav__link">
+    Indexando
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercicio-1" title="Exercício 1" class="md-nav__link">
+    Exercício 1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercicio-2" title="Exercício 2" class="md-nav__link">
+    Exercício 2
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funcoes" title="Funções" class="md-nav__link">
+    Funções
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pacotes" title="Pacotes" class="md-nav__link">
+    Pacotes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#controladores-de-fluxo" title="Controladores de Fluxo" class="md-nav__link">
+    Controladores de Fluxo
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ifelse" title="if/else" class="md-nav__link">
+    if/else
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for" title="for" class="md-nav__link">
+    for
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/p4hUSP/material-bio/edit/master/docs/01_introducao.md" title="Editar esta página" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="introducao-ao-r-e-ao-rstudio">Introdução ao R e ao RStudio<a class="headerlink" href="#introducao-ao-r-e-ao-rstudio" title="Permanent link">&para;</a></h1>
+<h2 id="1-o-que-e-o-r-e-o-rstudio">1. O que é o R e o RStudio?<a class="headerlink" href="#1-o-que-e-o-r-e-o-rstudio" title="Permanent link">&para;</a></h2>
+<h3 id="11-linguagem-de-programacao-r">1.1. Linguagem de programação R<a class="headerlink" href="#11-linguagem-de-programacao-r" title="Permanent link">&para;</a></h3>
+<p>O <strong>R</strong> é uma linguagem de programação que vem crescendo bastante nos
+últimos anos. Apesar de inicialmente ter como público estatísticos, a
+linguagem é uma das mais utilizadas para análise de dados nas mais
+diferentes frentes. A flexibilidade trazido por uma ínumera quantidade
+de pacotes permite lidar não só com tabelas estilo Excel, mas também com
+texto, imagens, etc.</p>
+<p>Quando baixamos o <strong>R</strong> pela primera vez nos assustamos com a sua
+interface, pois ela não é das mais agradáveis.</p>
+<div class="codehilite"><pre><span></span>knitr::include_graphics(&quot;imgs/r_console.png&quot;)
+</pre></div>
+
+
+<p><img src="imgs/r_console.png" style="display: block; margin: auto;" /></p>
+<p>Para solucionar isto e adicionar outras funcionalidades que melhoram a
+experiência de quem utiliza a linguagem, foi desenvolvido uma IDE
+(Ambiente de desenvolvimento integrado) chamada <em>RStudio</em>.</p>
+<h3 id="11-rstudio">1.1. RStudio<a class="headerlink" href="#11-rstudio" title="Permanent link">&para;</a></h3>
+<p>O <em>RStudio</em> nada mais é que um software, que integrado com o R, permite
+uma interação melhor com os objetos e rotinas criados com o R. O
+programa tem quatro painéis/seções:</p>
+<div class="codehilite"><pre><span></span>knitr::include_graphics(&quot;imgs/rstudio_print.png&quot;)
+</pre></div>
+
+
+<p><img src="imgs/rstudio_print.png" style="display: block; margin: auto;" /></p>
+<div class="codehilite"><pre><span></span>A - Console: Local na qual temos o R prompt e que podemos executar linha por linha (chamados de inputs). Além disso, é o local no qual os resultados (chamados de outputs) irão aparecer.
+
+B - File/Plots/Help: Nesta seção podemos ter acesso às pastas que estamos utilizando durante as nossas rotinas no software, além de visualizar os gráficos gerados a partir das análises e verificar a documentação de funções e pacotes, que explicaremos em breve.
+
+C - Workspace: Os valores gerados no R, como por exemplo, variáveis e tabelas que você definiu irão aparecer aqui, sobretudo, na aba Environment. E o histórico de códigos rodados na aba History. Veremos nas próximas aulas que a aba Connections é útil caso estejamos conectados com alguma base de dados externa, como por exemplo, Access ou PostgreSQL.
+
+D - Editor: Aqui é onde os scripts são escritos. Scripts nada mais são do que uma série de comandos salvos em um arquivo. Eles são úteis para mantermos a reprodutividade do código, portanto, sempre que formos utilziar o RStudio é recomendado escrever um script.
+</pre></div>
+
+
+<p>Podemos então começar a escrever nossas primeiras linhas de código!</p>
+<h2 id="abrindo-um-script">Abrindo um script<a class="headerlink" href="#abrindo-um-script" title="Permanent link">&para;</a></h2>
+<p>1- Podemos começar um novo script do zero</p>
+<p>2 - Ou podemos abrir um script que já foi trabalhado</p>
+<p>File → Open file → Aula1.R</p>
+<p>Atenção à extensão .R</p>
+<p>Num script tem linhas de comando e também linhas de comentários. Para
+marcarmos comentários basta colocarmos # Dessa forma, o R não executará
+o que está escrito depois das aspas</p>
+<h2 id="algumas-regras-de-boa-conduta">Algumas regras de boa conduta<a class="headerlink" href="#algumas-regras-de-boa-conduta" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>Não escreva diretamente no console. Salve o seu código <strong>sempre</strong> em
+    um script. Assim conseguimos salvor todas as decisões tomadas
+    durante uma análise e pertmir com que uma outra pessoa também chegue
+    nos resultados que obtivermos.</p>
+</li>
+<li>
+<p><strong>Nunca</strong> sobreponha o banco de dados. Uma vez que você tem um
+    <em>script</em>, não é preciso salvar as alterações já que você será capaz
+    de reproduzir os resultados no futuro.</p>
+</li>
+<li>
+<p>Comente o seu código. Lembre-se que outras pessoas irão ler o seu
+    código e que elas não fazem ideia do que passava na sua cabeça
+    quando você tomou algumas decisões. Além disso, o seu eu do futuro
+    irá agredecer um código bem documentado caso seja necessário
+    revisitá-lo.</p>
+</li>
+</ol>
+<h2 id="nossas-primeiras-linhas-de-codigo">Nossas primeiras linhas de código<a class="headerlink" href="#nossas-primeiras-linhas-de-codigo" title="Permanent link">&para;</a></h2>
+<p>Uma das funcionalidades mais básicas do <strong>R</strong> é realização de operações
+matemáticas. Se estamos digitando os comandos em um <em>script</em>, basta
+colocarmos o cursor do mouse na linha do código e apertar <code>Ctrl + Enter</code>
+e o resultado sairá no Console, assim como já havíamos mencionado.</p>
+<div class="codehilite"><pre><span></span>3 + 1 # Soma
+
+3 - 2 # Subtração
+
+4 * 2 # Multiplicação
+
+5 / 2 # Divisão
+</pre></div>
+
+
+<h2 id="objetos-e-atribuicoes-i">Objetos e atribuições I<a class="headerlink" href="#objetos-e-atribuicoes-i" title="Permanent link">&para;</a></h2>
+<p>“To understand computations in R, two slogans are helpful: • Everything
+that exists is an object. • Everything that happens is a function call.”
+— John Chambers</p>
+<p>Dados são guardados dentro de objetos.</p>
+<ul>
+<li>
+<p>Objetos possuem diferentes formas de estruturas os dados:</p>
+<ul>
+<li>
+<p>Vetores</p>
+</li>
+<li>
+<p>Listas</p>
+</li>
+<li>
+<p>DataFrames</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Objetos podem conter diferentes tipos de dados:</p>
+<ul>
+<li>
+<p>Números</p>
+</li>
+<li>
+<p>Strings</p>
+</li>
+<li>
+<p>Fatores</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="atribuindo-valores-a-variaveis-lt-">Atribuindo valores à variáveis (<code>&lt;-</code>)<a class="headerlink" href="#atribuindo-valores-a-variaveis-lt-" title="Permanent link">&para;</a></h3>
+<p>Quando fizemos as operações matemáticas, não salvamos os nossos
+resultados. Logo, caso quiséssemos acessar novamente, por exemplo, o
+resultado de <code>3 + 1</code>, seria necessário digitar novamente <code>3 + 1</code> e
+efetuar a operação. Contudo, é possível salvar os resultados em
+variáveis e, ao fazer referência a essas variáveis, obter outro
+resultado.</p>
+<div class="codehilite"><pre><span></span>3 + 1
+
+a &lt;- 3 + 1
+
+a * 2
+
+b &lt;- (“Hello, world”)
+
+b
+
+dado &lt;- c(1,2,3,4,5,6)
+
+dado
+</pre></div>
+
+
+<h3 id="tipos-de-dados">Tipos de dados<a class="headerlink" href="#tipos-de-dados" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>knitr::include_graphics(&quot;imgs/TipoDeDados.png&quot;)
+</pre></div>
+
+
+<p><img src="imgs/TipoDeDados.png" style="display: block; margin: auto;" /></p>
+<h4 id="lidando-com-numeros">Lidando com números<a class="headerlink" href="#lidando-com-numeros" title="Permanent link">&para;</a></h4>
+<p>De certa maneira, estamos muito acostumados com esse tipo de dados. Você
+consegue pensar em algum exemplo? Os minutos passados entre o momento
+que você saiu de casa e chegou nesta sala de aula é exemplo. Além desse,
+podemso pensar na renda mensal da sua família, na quantidade de livros
+que você possui e assim por diante.</p>
+<p>Tipos numéricos podem ser divididos em <strong>inteiros</strong> (<em>integers</em>) e
+<strong>reais</strong> (<em>float</em>). Diferentemente de outras linguagens de programação,
+você dificilmente terá que se preocupar com isso no R.</p>
+<div class="codehilite"><pre><span></span>3 # numero inteiro
+
+55.4 # numero real
+</pre></div>
+
+
+<h3 id="lidando-com-texto">Lidando com texto<a class="headerlink" href="#lidando-com-texto" title="Permanent link">&para;</a></h3>
+<p>Outro tipo de variável muito conhecida é o texto ou <em>string</em>. Para
+declaramos um texto no R podemos utilizar aspas simples (<code>''</code>) ou aspas
+duplas (<code>""</code>), mas lembre-se não podemos intercalar as aspas, como por
+exemplo, <code>'olá mundo"</code>.</p>
+<div class="codehilite"><pre><span></span>&quot;Vargas&quot;
+
+&#39;Janio Quadros&#39;
+
+&quot;1945&quot;
+</pre></div>
+
+
+<p>Perceba que devido ao fato de 1945 estar entre aspas, ele não é mais um
+dado do tipo número, mas sim texto.</p>
+<h3 id="lidando-com-fatores">Lidando com fatores<a class="headerlink" href="#lidando-com-fatores" title="Permanent link">&para;</a></h3>
+<p>Vamos supor que estamos trabalhando com dados de survey e em uma das
+questões temos a escala likert, em que as respostas vão do “Discordo
+totalmente” até o “Concordo totalmente” contabilizando um total de 6
+categorias de resposta. Ocorre que para que o <strong>R</strong> entenda este tipo de
+dado como algo categórico, precisamos transformá-los em fatores
+(factors).</p>
+<p>Para fazer essa transformação, utilizaremos uma função chamada
+<code>factor()</code> que recebe como parâmetro um vetor com o que queremos
+transformar em categorias.</p>
+<div class="codehilite"><pre><span></span>factor(c(&quot;Discordo totalmente&quot;, &quot;Discordo parcialmente&quot;, &quot;Indiferente&quot;, &quot;Concordo parcialmente&quot;, &quot;Concordo totalmente&quot;))
+</pre></div>
+
+
+<p>Diferente de quando executamos um dado tipo texto, os dados categóricos
+apresentam os níveis das categorias (levels). Perceba que as nossas
+categorias não estão de acordo com o que a escala likert pressupõe e
+para arrumar este problema, precisamos definir os níveis através de um
+outro parâmetro da função <code>factor()</code> chamado <code>levels =</code>.</p>
+<div class="codehilite"><pre><span></span>factor(c(&quot;Discordo totalmente&quot;, &quot;Discordo parcialmente&quot;, &quot;Indiferente&quot;, &quot;Concordo parcialmente&quot;, &quot;Concordo totalmente&quot;),
+       levels = c(&quot;Discordo totalmente&quot;, &quot;Discordo parcialmente&quot;, &quot;Indiferente&quot;, &quot;Concordo parcialmente&quot;, &quot;Concordo totalmente&quot;))
+</pre></div>
+
+
+<p>Pode parecer um pouco confuso agora, mas iremos esclarecer estes pontos
+nos próximos tópicos.</p>
+<h3 id="lidando-com-data-e-tempo">Lidando com data e tempo<a class="headerlink" href="#lidando-com-data-e-tempo" title="Permanent link">&para;</a></h3>
+<p>Muitas vezes precisamos lidar com data, como por exemplo, filtrar nossa
+análise em um intervalo de tempo. Porém, números e textos não são
+suficientes para entender as regras impostas pelas datas, como por
+exemplo, “01/01/2019” é mais recente que “31/12/2018”.</p>
+<p>Iremos explorar esse assunto mais pra frente, pois existem formas mais
+eficientes de trabalhar com este tipo de dado, de qualquer forma um dado
+tipo data se apresenta da seguinte forma:</p>
+<div class="codehilite"><pre><span></span>Sys.Date()
+</pre></div>
+
+
+<p>Parece uma variável texto, não? Porém se aplicarmos a função <code>str()</code>,
+que serve para vermos qual é o tipo do dado veremos que,</p>
+<div class="codehilite"><pre><span></span>str(Sys.Date())
+</pre></div>
+
+
+<h3 id="lidando-com-logicosbooleanos">Lidando com lógicos/booleanos<a class="headerlink" href="#lidando-com-logicosbooleanos" title="Permanent link">&para;</a></h3>
+<p>Valores booleanos são resultados de operações booleanas e podem ser
+definidos como <strong>verdadeiros</strong> ou <strong>falsos</strong>. Por convenção, trabalhamos
+com os termos em inglês. Portanto, <strong>TRUE</strong> ou <strong>FALSE</strong>.</p>
+<p>Por operações booleanas, podemos pensar em diferentes testes que tenham
+<strong>necessariamente</strong> uma resposta ou verdadeira ou falsa. Por exemplo, 3
+é maior do que 1? Verdadeiro! E 3 é menor do que 2? Falso!</p>
+<p>Vamos realizar essas duas operações no R.</p>
+<div class="codehilite"><pre><span></span># 3 é maior do que 1?
+3 &gt; 1
+
+# 3 é maior do que 1?
+3 &lt; 2
+</pre></div>
+
+
+<p>Existem, obviamente, outras operações. É possível também testar a
+igualdade entre dois valores com <code>==</code>.</p>
+<div class="codehilite"><pre><span></span># 2 é igual a 2?
+2 == 2
+</pre></div>
+
+
+<p>Também podemos testar se dois valores são diferentes.</p>
+<div class="codehilite"><pre><span></span>#120 é diferente de 20?
+120 != 20
+</pre></div>
+
+
+<p>Outras variações utilizadas são o maior ou igual (<code>&gt;=</code>) e o menor ou
+igual (<code>&lt;=</code>). Além disso, também é possível realizar essas operações com
+textos.</p>
+<div class="codehilite"><pre><span></span># &quot;harvard&quot; é igual a &quot;MIT&quot;?
+&quot;Harvard&quot; == &quot;MIT&quot;
+</pre></div>
+
+
+<p>Não iremos introduzir essa ideia aqui, mas caso seja de interesse também
+podemos utilizar as noções de maior e menor para textos. Você teria um
+palpite de como um texto pode ser maior do que outro?</p>
+<h3 id="valores-ausentes-missings">Valores ausentes/ missings<a class="headerlink" href="#valores-ausentes-missings" title="Permanent link">&para;</a></h3>
+<p>O que são <em>missings</em> e por que existe um valor especial para eles?</p>
+<p>Existem dois tipos de valores missing, o <code>NA</code> (not avaible) e o <code>NaN</code>
+(not a number), ambos tem sentidos semelhantes, porém o primeiro é mais
+genérico para cada tipo de dado. Para sabermos se um certo dado é
+missing, utilizamos a função <code>is.na()</code>.</p>
+<div class="codehilite"><pre><span></span>is.na(NA)
+
+is.na(99)
+</pre></div>
+
+
+<h2 id="exercicios">Exercícios<a class="headerlink" href="#exercicios" title="Permanent link">&para;</a></h2>
+<h3 id="parte-a-tipos-de-dados">Parte A: Tipos de dados<a class="headerlink" href="#parte-a-tipos-de-dados" title="Permanent link">&para;</a></h3>
+<p>Marque verdadeiro ou falso. Caso verdadeiro, informe o tipo de dado:</p>
+<p>Obs: Caso apareça “+” no seu console ao testar as afirmações, basta
+apertar “Esc”</p>
+<ol>
+<li>
+<p><code>33,5</code></p>
+</li>
+<li>
+<p><code>"Olá mundo"</code></p>
+</li>
+<li>
+<p><code>"O 'R' é uma linguagem legal"</code></p>
+</li>
+<li>
+<p><code>"O 'R é uma linguagem legal"</code></p>
+</li>
+<li>
+<p><code>"O 'R é uma linguagem legal'</code></p>
+</li>
+<li>
+<p><code>400e+10</code></p>
+</li>
+<li>
+<p><code>factor("oi", levels = c("oi", "tchau"))</code></p>
+</li>
+<li>
+<p><code>TRUE</code></p>
+</li>
+<li>
+<p><code>FALSE</code></p>
+</li>
+</ol>
+<h2 id="estrutura-de-dados">Estrutura de dados<a class="headerlink" href="#estrutura-de-dados" title="Permanent link">&para;</a></h2>
+<p>As estruturas de dados são maneiras de organizar e guardar dados dentro
+da linguagem para que possamos trabalhar de forma mais eficiente. No
+nosso cotidiano utilizaremos três destas estruturas: <strong>vetores</strong>,
+<strong>listas</strong> e <strong>dataframes</strong>. Essas três estruturas podem ser dividas
+entre homogêneas e heterogênas. Mas o que isso significa? Basicamente
+diz respeito a quantidade de tipos de dados que ela pode receber, isto
+é, estruturas homogêneas só podem receber um tipo de dado, enquanto as
+estruturas heterogêneas podem receber mais de um tipo de dado.</p>
+<h3 id="vetores-atomicos">Vetores (atômicos)<a class="headerlink" href="#vetores-atomicos" title="Permanent link">&para;</a></h3>
+<p>Um vetor atômico é a estrutura mais básica no R; é um vetor de dados
+homogêneo com apenas uma dimensão. Uma analogia interessante para
+entendermos um vetor atômico é a seguinte:</p>
+<div class="codehilite"><pre><span></span>knitr::include_graphics(&quot;imgs/r_data_structures.png&quot;)
+</pre></div>
+
+
+<p><img src="imgs/r_data_structures.png" style="display: block; margin: auto;" /></p>
+<p>Que tal um exemplo? Imagine que você queira organizar em um vetor a
+quantidade de pessoas dentro de vagões de um trem. Nesse sentido, a
+quantidade de pessoas no primeira vagão é seguida da quantidade de
+pessoas no segundo e assim por diante.</p>
+<div class="codehilite"><pre><span></span>c(120, 29, 191, 18, 39)
+</pre></div>
+
+
+<p>Quantas pessoas estão no segundo vagão? 29? Acertou!</p>
+<p>Perceba então que para construir um vetor basta colocarmos os valores
+dentro de <code>c()</code>.</p>
+<h3 id="indexando-vetores">Indexando vetores<a class="headerlink" href="#indexando-vetores" title="Permanent link">&para;</a></h3>
+<p>Dado que criamos objetos, podemos acessar os valores específicos a
+partir da posição dentro do vetor. No exemplo anterior, você poderia ter
+pedido para o R lhe responder quem está na segunda posição. Como fazer
+isso? basta salvar o vetor em uma variável e color <code>[2]</code></p>
+<div class="codehilite"><pre><span></span>trem &lt;- c(120, 29, 191, 18, 39)
+
+trem[1]
+</pre></div>
+
+
+<p>Para indexarmos mais de um elemento podemos indexar de duas formas. Logo
+se quiséssemos o número de pessoas no terceiro e quarto vagão:</p>
+<div class="codehilite"><pre><span></span>trem[c(3,4)]
+
+trem[3:4]
+</pre></div>
+
+
+<p>O que acontece se você utilizar <code>[3:5]</code>?</p>
+<div class="codehilite"><pre><span></span>trem[3:5]
+</pre></div>
+
+
+<h3 id="listas">Listas<a class="headerlink" href="#listas" title="Permanent link">&para;</a></h3>
+<p>Em geral, dificilmente utilizamos as listas de maneira pura. Contudo,
+entender o funcionamento dela é essencial para pegar os fundamentos de
+uma outra estrutura de dados.</p>
+<p>Vamos montar um guarda-roupa com três gavetas:</p>
+<ul>
+<li>
+<p>Primeira gaveta: 3 meias</p>
+</li>
+<li>
+<p>Segunda gaveta: 5 camisetas com logotipo que vai de 1 até 5</p>
+</li>
+<li>
+<p>Terceira gaveta: uma caixa com dois relógios</p>
+</li>
+</ul>
+<p>Uma forma de representar este guarda-roupa é por meio de uma lista!</p>
+<div class="codehilite"><pre><span></span>lista &lt;- list(c(&quot;Meia 1&quot;, &quot;Meia 2&quot;, &quot; Meia 3&quot;), c(1, 2, 3, 4, 5), list(c(&quot;Relogio 1&quot;, &quot;Relogio 2&quot;)))
+</pre></div>
+
+
+<p>Listas são parecidas com vetores atômicos, porém elas podem conter
+vetores de qualquer tipo (numéricos, lógicos, texto) e até mesmo outras
+listas.</p>
+<h4 id="indexando">Indexando<a class="headerlink" href="#indexando" title="Permanent link">&para;</a></h4>
+<p>Apesar de parecido com um vetor atômico, a indexação tem alguns aspectos
+diferentes! Quando indexamos um vetor, obtemos o elemento a partir de
+<code>[]</code> em que dentro colocamos a posição de interesse, porém, se fizermos
+o mesmo com a lista é como se abríssemos apenas a gaveta, mas não
+acessamos o que está dentro dela. Ou seja, para acessar o elemento da
+lista precisamos utilizar <code>[[]]</code>.</p>
+<div class="codehilite"><pre><span></span>lista[1] # Obtendo a posicao da lista
+
+lista[[1]] # Obtendo os elementos da lista
+
+lista[[1]][1]
+
+lista[[3]][[1]] # Obtendo o elemento da lista dentro de outra lista
+</pre></div>
+
+
+<h3 id="dataframes">Dataframes<a class="headerlink" href="#dataframes" title="Permanent link">&para;</a></h3>
+<p>Se você já utilizou uma planilha de Excel o DataFrame não possui quase
+nada de diferente. Assim como as listas, data frames são estruturas de
+dados heterogêneas. Você saberia dizer por que?</p>
+<div class="codehilite"><pre><span></span>tabela &lt;- data.frame(presidente_eleito = c(&quot;Dutra&quot;, &quot;Vargas&quot;, &quot;JK&quot;, &quot;Janio Quadros&quot;), porcentagem = c(55.39, 48.73, 35.68, 48.26), vitoria_uf = c(23, 17, 15, 16), vice_igual_presid = c(TRUE, FALSE, FALSE, FALSE))
+
+tabela
+</pre></div>
+
+
+<h2 id="dataframes_1">Dataframes<a class="headerlink" href="#dataframes_1" title="Permanent link">&para;</a></h2>
+<p>Diferentemente do Excel, não podemos selecionar uma célula e alterar um
+dado. No R, para manipular e visualizar uma tabela precisamos utilizar
+fuções. Não se estresse caso nunca tenho ouvido falar delas. Pense
+apenas que elas realizam alguma <strong>ação</strong>.</p>
+<p>Repare nos resultados das funções a seguir:</p>
+<div class="codehilite"><pre><span></span>View(tabela) # mostra o banco no console
+
+head (tabela) # mostra as seis primeiras linhas do banco no console
+
+str(tabela)# mostra a estrutura da tabela
+
+names(tabela) # mostra o nome das variáveis
+
+nrow(tabela) # nº de linhas
+
+ncol(tabela) #nº de colunas
+
+dim(tabela) # dimensões
+</pre></div>
+
+
+<h4 id="indexando_1">Indexando<a class="headerlink" href="#indexando_1" title="Permanent link">&para;</a></h4>
+<p>Assim como data frames, a indexação também tem mais de uma dimensão,
+isto é, primeiro indexamos a linha e depois a coluna, como por exemplo:</p>
+<div class="codehilite"><pre><span></span>tabela[1, 2] # Primeira linha, segunda coluna
+
+tabela[1,] # Primeira linha, todas as colunas
+
+tabela[,1] # Todas as linhas, primeira coluna
+
+tabela[1:3,] # Linhas de 1 até 3, todas as colunas
+
+tabela[,2:4] # todas as linhas, colunas de 2 até 4
+</pre></div>
+
+
+<p>Como estamos lidando com tabelas também podemos indexar com o nome das
+colunas</p>
+<div class="codehilite"><pre><span></span>tabela[,&quot;porcentagem&quot;]
+
+tabela[2,&quot;porcentagem&quot;]
+</pre></div>
+
+
+<p>Por fim também podemos indexar utilizando o operador <code>$</code> seguido do nome
+da coluna.</p>
+<div class="codehilite"><pre><span></span>tabela$presidente_eleito
+
+tabela$vice_igual_presid[1]
+</pre></div>
+
+
+<h2 id="exercicio-1">Exercício 1<a class="headerlink" href="#exercicio-1" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>Crie um dataframe com o nome, idade e filme preferido dos seus
+    colegas de turma. Faça um script que documente o passo a passo da
+    criação do dta frame</p>
+</li>
+<li>
+<p>Crie uma lista composta por 3 elementos. Faça um script que
+    documente o passo a passo da criação do dta frame Como podemos saber
+    o conteúdo do segundo elemento da lista. Utilze a indexação</p>
+</li>
+</ol>
+<h2 id="exercicio-2">Exercício 2<a class="headerlink" href="#exercicio-2" title="Permanent link">&para;</a></h2>
+<p>No R temos, bancos para fins didáticos. Para utilizá-los basta usar a
+função data. Para esse exercícios utilizaremos o banco mtcars
+data(mtcars) 1. Visualize o banco. Do que se trata? 2. Quais são suas
+variáveis? 3. E suas dimensões? 4. Selecione as 10 primeiras observações</p>
+<h3 id="funcoes">Funções<a class="headerlink" href="#funcoes" title="Permanent link">&para;</a></h3>
+<p>Como você deve ter notado mencionamos algumas vezes a palavra
+função/funções, mas o que é isso? Podemos pensar cada função como uma
+<strong>ação</strong> a ser realizada, como por exemplo, transforme os dados em
+fatores (<code>factor()</code>) ou realize a média (<code>mean()</code>) de um conjunto de
+dados númericos. Ou seja, uma função é um conjunto de instruções que
+realizam uma tarefa especifica, podendo carregar com parâmetros a serem
+preenchidos pelo usuário ou não.</p>
+<p>Vamos pensar na função <code>strsplit()</code>! Ok, se você nunca programou antes
+talvez não saiba o que ela faz… Para isso existe o que nós chamamos de
+documentação, um local que nos explica qual é a “ação” que a função
+realiza e os parâmetros que ela aceita.</p>
+<div class="codehilite"><pre><span></span># Para ver a documentação de uma função
+?strsplit()
+</pre></div>
+
+
+<p>Se observarmos o tópico “Usage” veremos o seguinte:</p>
+<p><code>strsplit(x, split, fixed = FALSE, perl = FALSE, useBytes = FALSE)</code></p>
+<p>O <code>x</code> e o <code>split</code> são argumentos que devem ser obrigatóriamente
+preenchidos, o restante já esta preenchido por padrão (também falamos
+default). Vamos ver um exemplo,</p>
+<div class="codehilite"><pre><span></span>strsplit(x = &quot;Aprender sobre funcoes pode ser divertido&quot;, split = &quot; &quot;)
+</pre></div>
+
+
+<p>Como os argumentos possuem posições não precisamos necessariamente ficar
+escrevendo <code>x =</code> ou <code>split =</code>.</p>
+<div class="codehilite"><pre><span></span>strsplit(&quot;Aprender sobre funcoes pode ser divertido&quot;, &quot; &quot;)
+</pre></div>
+
+
+<p>Se você tiver mais interesse em saber sobre funções <a href="https://www.datacamp.com/community/tutorials/functions-in-r-a-tutorial#what">clique
+aqui!</a></p>
+<h3 id="pacotes">Pacotes<a class="headerlink" href="#pacotes" title="Permanent link">&para;</a></h3>
+<p>Segundo a definição do livro R Packages, escrito por Hadley Wickham, um
+pacote é uma unidade fundamental de compartilhamento de códigos, dados,
+documentação e testes. Em outras palavras, os pacotes são coleções de
+códigos (funções) e dados desenvolvidos pela comunidade.</p>
+<p>Estes pacotes ficam localizados no que chamamos de repositório. O
+principal repositório recebe o nome de <strong>C</strong>omprehensive <strong>R</strong>
+<strong>A</strong>rchive <strong>N</strong>etwork, o também chamado, CRAN. Mas existem outros
+também, como o Github, no qual a forma de obter os pacotes muda. Mas
+como instalamos um pacote no R? A resposta é simples, utilizamos uma
+função chamada <code>install.packages()</code> em que o argumento principal é o
+nome do pacote que queremos instalar.</p>
+<p>Uma peculiaridade desta função é que por padrão ela instala os pacotes
+que estão no CRAN, como por exemplo, vamos instalar um pacote chamado
+“dplyr”</p>
+<div class="codehilite"><pre><span></span>install.packages(&quot;dplyr&quot;)
+</pre></div>
+
+
+<p>Após instalarmos o pacote, devemos habilitá-lo com uma função chamada
+<code>library()</code></p>
+<div class="codehilite"><pre><span></span>library(dplyr)
+</pre></div>
+
+
+<p>Caso o pacote não esteja no CRAN, mas sim no Github, devemos instalar o
+pacote com o auxilio de uma função chamada <code>install_github()</code> do pacote
+<code>devtools</code>.</p>
+<div class="codehilite"><pre><span></span>install.packages(&quot;devtools&quot;)
+
+library(devtools)
+
+install_github(&quot;abjur/abjutils&quot;)
+
+library(abjutils)
+</pre></div>
+
+
+<h2 id="controladores-de-fluxo">Controladores de Fluxo<a class="headerlink" href="#controladores-de-fluxo" title="Permanent link">&para;</a></h2>
+<p>É muito comum estabelecermos uma condição para tomar uma decisão, como
+por exemplo, ‘Porcentagem de votos maior que 50% pode significar
+vitória, caso contrário, derrota’. Além disso, muitas vezes precisamos
+percorrer diversos valores, como por exemplo, para cada eleição
+verificamos se o presidente eleito teve mais de 50% dos votos.</p>
+<p>Para que possamos fazer isso, utilizaremos o <code>if/else</code> e o <code>for</code>!</p>
+<h3 id="ifelse">if/else<a class="headerlink" href="#ifelse" title="Permanent link">&para;</a></h3>
+<p>A estrutura do if/else é a seguinte:</p>
+<div class="codehilite"><pre><span></span>if(&lt;condicao&gt;){
+  &lt;comando1&gt;
+  &lt;comando2&gt;
+  &lt;etc&gt;
+}else{
+  &lt;comando3&gt;
+  &lt;comando4&gt;
+  &lt;etc&gt;
+}
+</pre></div>
+
+
+<p>Podemos interpretá-la da seguinte maneira: Se a condição for verdadeira,
+execute os comandos 1 e 2, caso contrário, execute os comandos 3 e 4.
+Pensando em algo menos abstrato podemos dizer que caso o candidato para
+o pletio tenha recebido mais de 50% dos votos, ele está eleito, caso
+contrário, ele perdeu a eleição.</p>
+<div class="codehilite"><pre><span></span>porcentagem_de_votos &lt;- 55
+if(porcentagem_de_votos &gt; 50){
+  print(&quot;Eleito&quot;)
+} else {
+  print(&quot;Não eleito&quot;)
+}
+</pre></div>
+
+
+<h3 id="for">for<a class="headerlink" href="#for" title="Permanent link">&para;</a></h3>
+<p>Vamos criar o seguinte <code>dataframe</code>:</p>
+<ul>
+<li>
+<p><code>ano</code>: ano da observação.</p>
+</li>
+<li>
+<p><code>pais</code>: país da observação.</p>
+</li>
+<li>
+<p><code>pip</code>: Produto Interno Bruto do país.</p>
+</li>
+<li>
+<p><code>pop</code>: População do país.</p>
+</li>
+</ul>
+<!-- -->
+
+<div class="codehilite"><pre><span></span>tabela &lt;- data.frame(ano = c(2014, 2014, 2015, 2015, 2016, 2016),
+                     pais = c(&#39;Brasil&#39;, &#39;China&#39;, &#39;Brasil&#39;, &#39;China&#39;, &#39;Brasil&#39;, &#39;China&#39;),
+                     pip = c(100,130, 110, 140, 160, 170),
+                     pop = c(3, 8, 4, 9, 6, 14))
+</pre></div>
+
+
+<p>Nosso objetivo:</p>
+<blockquote>
+<p>Criar uma terceira coluna com o <em>pip per capta</em> com um <code>for</code></p>
+</blockquote>
+<p>Mas o que é um <code>for</code>?</p>
+<div class="codehilite"><pre><span></span>for (i in x){
+  &lt;comando1&gt;
+  &lt;comando2&gt;
+}
+</pre></div>
+
+
+<p>Nós lemos o <code>for</code> acima da seguinte maneira: <strong>Para cada valor “i”
+presente na sequência “x”, realize tais comandos. Ou seja, para cada
+linha da nossa tabela, some um ao percentual de votos recebidos.</strong></p>
+<div class="codehilite"><pre><span></span>for(i in 1:nrow(tabela)){
+  print(tabela$porcentagem_de_votos[i] + 1)
+}
+</pre></div>
+
+
+<p>Vamos entender algumas coisas aqui,</p>
+<ul>
+<li>
+<p><code>nrow(tabela)</code> é uma função que retorna o número de linhas de uma
+    tabela, ou seja, seu resultado é um número.</p>
+</li>
+<li>
+<p>Quando temos <code>1:nrow(tabela)</code>, estamos criando um vetor com uma
+    sequência de 1 até o número de linhas da nossa tabela, no caso, 6.
+    Isso significa que nosso <code>for</code> vai percorrer as treze linhas da
+    tabela.</p>
+</li>
+<li>
+<p>o <code>i</code> assumirá os valores de 1 até 13, por isso utilizamos
+    tabela$porcentagem_de_votos[i], ou seja, estamos indexando as
+    tabelas pelos valores que <code>i</code> assume.</p>
+</li>
+</ul>
+<p>Vamos agora voltar ao nosso objetivo principal:</p>
+<blockquote>
+<p>Criar uma coluna chamada categoria_voto, na qual, se o voto para a
+disputa presidencial for maior que 70% chamaremos de ‘super
+majoritário’, caso contrário, chamaremos de ‘normal’. Caso a disputa
+seja para o governo do estados iremos considerar como ‘super
+majoritário’ um percentual maior que 80%.</p>
+</blockquote>
+<div class="codehilite"><pre><span></span>tabela$categoria_voto &lt;- NA # Criando uma coluna vazia
+for(i in 1:nrow(tabela)){
+  if(tabela$tipo_disputa[i] == &quot;Presidencia&quot;){
+    if(tabela$porcentagem_de_votos[i] &gt;= 70){
+      tabela$categoria_voto[i] &lt;- &quot;super majoritario&quot;
+    } else {
+      tabela$categoria_voto[i] &lt;- &quot;normal&quot;
+    }
+  } else {
+    if(tabela$porcentagem_de_votos[i] &gt;= 80){
+      tabela$categoria_voto[i] &lt;- &quot;super majoritario&quot;
+    } else {
+      tabela$categoria_voto[i] &lt;- &quot;normal&quot;
+    }
+  }
+}
+
+print(tabela)
+</pre></div>
+
+
+<h1 id="exercicios_1">Exercícios<a class="headerlink" href="#exercicios_1" title="Permanent link">&para;</a></h1>
+<h2 id="parte-a-tipos-de-dados_1">Parte A: Tipos de dados<a class="headerlink" href="#parte-a-tipos-de-dados_1" title="Permanent link">&para;</a></h2>
+<h3 id="exercicio-1_1">Exercicio 1<a class="headerlink" href="#exercicio-1_1" title="Permanent link">&para;</a></h3>
+<p>Execute os códigos abaixo e verifique se são dados válidos em R. Caso
+verdadeiro, informe o tipo de dado:</p>
+<p>Obs: Caso apareça “+” no seu console ao testar as afirmações, basta
+apertar “Esc”</p>
+<ol>
+<li>
+<p><code>33,5</code></p>
+</li>
+<li>
+<p><code>"Olá mundo"</code></p>
+</li>
+<li>
+<p><code>"O 'R' é uma linguagem legal"</code></p>
+</li>
+<li>
+<p><code>"O 'R é uma linguagem legal"</code></p>
+</li>
+<li>
+<p><code>"O 'R é uma linguagem legal'</code></p>
+</li>
+<li>
+<p><code>400e+10</code></p>
+</li>
+<li>
+<p><code>factor("oi", levels = c("oi", "tchau"))</code></p>
+</li>
+<li>
+<p><code>true</code></p>
+</li>
+<li>
+<p><code>False</code></p>
+</li>
+</ol>
+<h3 id="exercicio-2_1">Exercicio 2<a class="headerlink" href="#exercicio-2_1" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Altere o valor de <code>v_numero</code> para 42</li>
+</ol>
+<!-- -->
+
+<div class="codehilite"><pre><span></span>v_numero &lt;- 42.5
+</pre></div>
+
+
+<ol>
+<li>Altere o valor de <code>v_caractere</code> para “universo”.</li>
+</ol>
+<!-- -->
+
+<div class="codehilite"><pre><span></span>v_caractere &lt;- &quot;algum texto&quot;`
+</pre></div>
+
+
+<ol>
+<li>Altere o valor de <code>v_logical</code> para FALSE</li>
+</ol>
+<!-- -->
+
+<div class="codehilite"><pre><span></span>`v_logical &lt;- TRUE`
+</pre></div>
+
+
+<h2 id="parte-b-estrutura-de-dados">Parte B: Estrutura de dados<a class="headerlink" href="#parte-b-estrutura-de-dados" title="Permanent link">&para;</a></h2>
+<h3 id="exercicio-1_2">Exercicio 1<a class="headerlink" href="#exercicio-1_2" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Crie um dataframe dos quatro primeiros candidatos com as seguintes
+    informações: Nome, Partido, Número de Votos e Porcentagem de Votos
+    com base na imagem imgs/1turno.jpg.</p>
+</li>
+<li>
+<p>Usando a indexação, obtenha:</p>
+<ul>
+<li>
+<p>Todas as informações do candidato Ciro Gomes</p>
+</li>
+<li>
+<p>O partido de todos candidatos</p>
+</li>
+<li>
+<p>Todas as informações dos dois primeiros colocados</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Obtenha:</p>
+<ul>
+<li>
+<p>A média de votos de todos os candidatos</p>
+</li>
+<li>
+<p>A soma de votos dos dois primeiros candidatos</p>
+</li>
+<li>
+<p>O desvio padrão dos votos</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="parte-c-controladores-de-fluxo">Parte C: Controladores de fluxo<a class="headerlink" href="#parte-c-controladores-de-fluxo" title="Permanent link">&para;</a></h2>
+<h3 id="exercicio-1_3">Exercicio 1<a class="headerlink" href="#exercicio-1_3" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Execute o código em data/eleicoes_sp.R para criar o data frame para
+    o exercício. O data frame é o resultado da eleição do 1º turno de
+    2018 para governador do estado de São Paulo.</p>
+</li>
+<li>
+<p>Utilizando o laço FOR e o condicional IF/ELSE, crie uma coluna no
+    data frame com o nome <code>“porcentagem_votos”</code> em que indique a
+    porcentagem de votos obtida por cada candidato.</p>
+</li>
+<li>
+<p>Crie outra coluna com o nome “resultado”. O valor dessa coluna deve
+    assumir o valor <code>"Eleito"</code> caso o candidato obteve mais de 50% dos
+    votos. Caso nenhum candidato obteve essa porcentagem, os dois
+    candidatos com maior porcentagem de votos devem ter a coluna com o
+    valor <code>"2º turno"</code> e os demais como <code>"Não Eleito"</code>. Crie um script
+    que utilize o laço <code>for</code> e o <code>if</code>/<code>else</code> para verificar as duas
+    situações.</p>
+</li>
+</ol>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href=".." title="Material de Biologia" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Anterior
+                </span>
+                Material de Biologia
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../01_visualizacao/" title="Visualização de Dados" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Próximo
+                </span>
+                Visualização de Dados
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2019 Programação para Humanidades
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/p4husp" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://facebook.com/p4husp" class="md-footer-social__link fa fa-facebook"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.245445c6.js"></script>
+      
+        
+        
+          
+          <script src="../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+          
+            
+              
+              
+                <script src="../assets/javascripts/lunr/lunr.pt.js"></script>
+              
+            
+          
+          
+            <script src="../assets/javascripts/lunr/lunr.multi.js"></script>
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>
