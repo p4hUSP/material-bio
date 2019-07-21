@@ -1,7 +1,7 @@
 ---
 title: "Curso NECI - Parte I"
 author: "P4H"
-output: github_document
+output: md_document
 ---
 
 # Introdução ao R
