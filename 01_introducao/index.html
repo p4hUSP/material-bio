@@ -606,6 +606,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#exercicio-6-desafio" title="Exercicio 6 - Desafio" class="md-nav__link">
+    Exercicio 6 - Desafio
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -982,6 +989,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#exercicio-6-desafio" title="Exercicio 6 - Desafio" class="md-nav__link">
+    Exercicio 6 - Desafio
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1032,11 +1046,7 @@ de pacotes permite lidar não só com tabelas estilo Excel, mas também com
 texto, imagens, etc.</p>
 <p>Quando baixamos o <strong>R</strong> pela primera vez nos assustamos com a sua
 interface, pois ela não é das mais agradáveis.</p>
-<div class="codehilite"><pre><span></span>knitr::include_graphics(&quot;imgs/r_console.png&quot;)
-</pre></div>
-
-
-<p><img src="imgs/r_console.png" style="display: block; margin: auto;" /></p>
+<p><img alt="" src="../imgs/r_console.png" /></p>
 <p>Para solucionar isto e adicionar outras funcionalidades que melhoram a
 experiência de quem utiliza a linguagem, foi desenvolvido uma IDE
 (Ambiente de desenvolvimento integrado) chamada <em>RStudio</em>.</p>
@@ -1044,11 +1054,7 @@ experiência de quem utiliza a linguagem, foi desenvolvido uma IDE
 <p>O <em>RStudio</em> nada mais é que um software, que integrado com o R, permite
 uma interação melhor com os objetos e rotinas criados com o R. O
 programa tem quatro painéis/seções:</p>
-<div class="codehilite"><pre><span></span>knitr::include_graphics(&quot;imgs/rstudio_print.png&quot;)
-</pre></div>
-
-
-<p><img src="imgs/rstudio_print.png" style="display: block; margin: auto;" /></p>
+<p><img alt="" src="../imgs/rstudio_print.png" /></p>
 <div class="codehilite"><pre><span></span>A - Console: Local na qual temos o R prompt e que podemos executar linha por linha (chamados de inputs). Além disso, é o local no qual os resultados (chamados de outputs) irão aparecer.
 
 B - File/Plots/Help: Nesta seção podemos ter acesso às pastas que estamos utilizando durante as nossas rotinas no software, além de visualizar os gráficos gerados a partir das análises e verificar a documentação de funções e pacotes, que explicaremos em breve.
@@ -1163,11 +1169,13 @@ dado
 
 
 <h3 id="23-tipos-de-dados">2.3. Tipos de dados<a class="headerlink" href="#23-tipos-de-dados" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>knitr::include_graphics(&quot;imgs/TipoDeDados.png&quot;)
-</pre></div>
-
-
-<p><img src="imgs/TipoDeDados.png" style="display: block; margin: auto;" /></p>
+<p><center>
+<img alt="" src="../imgs/r-datatypes-vectors.png" />
+</center>
+<center>
+<em>Tipos de Dados no R (Fonte:
+<a href="https://www.wikitechy.com" class="uri"><a href="https://www.wikitechy.com">https://www.wikitechy.com</a></a>)</em>
+</center></p>
 <h4 id="231-lidando-com-numeros">2.3.1. Lidando com números<a class="headerlink" href="#231-lidando-com-numeros" title="Permanent link">&para;</a></h4>
 <p>De certa maneira, estamos muito acostumados com esse tipo de dados. Você
 consegue pensar em algum exemplo? Os minutos passados entre o momento
@@ -1342,15 +1350,20 @@ entre homogêneas e heterogênas. Mas o que isso significa? Basicamente
 diz respeito a quantidade de tipos de dados que ela pode receber, isto
 é, estruturas homogêneas só podem receber um tipo de dado, enquanto as
 estruturas heterogêneas podem receber mais de um tipo de dado.</p>
+<p><img alt="" src="../imgs/r_data_structures.png" /></p>
 <h3 id="41-vetores-atomicos">4.1. Vetores (atômicos)<a class="headerlink" href="#41-vetores-atomicos" title="Permanent link">&para;</a></h3>
 <p>Um vetor atômico é a estrutura mais básica no R; é um vetor de dados
-homogêneo com apenas uma dimensão. Uma analogia interessante para
-entendermos um vetor atômico é a seguinte:</p>
-<div class="codehilite"><pre><span></span>knitr::include_graphics(&quot;imgs/r_data_structures.png&quot;)
-</pre></div>
-
-
-<p><img src="imgs/r_data_structures.png" style="display: block; margin: auto;" /></p>
+homogêneo com apenas uma dimensão. Imagine o vetor como um três em que
+os valores estão ordenados em posições (primeiro, segundo, terceiro) e
+que todos os valores contidos por ele precisam ser do mesmo tipo.</p>
+<p><br/></p>
+<p><center>
+<img alt="" src="../imgs/train-illustration.png" />
+</center>
+<center>
+<em>Ilustração de um trem</em>
+</center>
+<br/></p>
 <p>Que tal um exemplo? Imagine que você queira organizar em um vetor a
 quantidade de pessoas dentro de vagões de um trem. Nesse sentido, a
 quantidade de pessoas no primeira vagão é seguida da quantidade de
@@ -1508,25 +1521,159 @@ uso dos seguintes pacotes:</p>
 <div class="admonition warning">
 <p class="admonition-title">Instalando pacotes do R</p>
 <p>O R não possui todos os pacotes previamente. Em geral, utilizaremos o comando <code>install.packages()</code> 
-para instalar pacotes no R. Execute o comando <code>install.packages(c('readr', 'readxl', 'haven'))</code>.</p>
+para instalar pacotes no R. Execute o comando <code>install.packages(c('readr', 'readxl', 'haven'))</code>.
+Lembre-se de carregar o pacote no R com o comando <code>library()</code>. Por exemplo, <code>library(readr)</code>.</p>
 </div>
+<p>Você sabia que o TSE (Tribunal Superior Eleitoral) libera diversos dados
+sobre as eleições no site deles?</p>
+<p>Que tal tentar baixar o banco de candidatos? Para isso, baixe os
+arquivos:</p>
+<ul>
+<li>
+<p><a href="https://github.com/p4hUSP/material-bio/raw/master/docs/data/candidatos_sp_virgula.csv">Candidatos -
+    CSV</a></p>
+</li>
+<li>
+<p><a href="https://github.com/p4hUSP/material-bio/raw/master/docs/data/candidatos_sp_pontovigula.csv">Candidatos -
+    CSV2</a></p>
+</li>
+<li>
+<p><a href="https://github.com/p4hUSP/material-bio/raw/master/docs/data/candidatos_sp_tab.csv">Candidatos -
+    TAB</a></p>
+</li>
+<li>
+<p><a href="https://github.com/p4hUSP/material-bio/raw/master/docs/data/candidatos_sp_arroba.csv">Candidatos -
+    Arroba</a></p>
+</li>
+<li>
+<p><a href="https://github.com/p4hUSP/material-bio/raw/master/docs/data/candidatos_sp_excel.xlsx">Candidatos -
+    Excel</a></p>
+</li>
+<li>
+<p><a href="https://github.com/p4hUSP/material-bio/raw/master/docs/data/candidatos_sp_stata.dta">Candidatos -
+    Excel</a></p>
+</li>
+</ul>
+<p>Às vezes, o navegador não irá fazer o download automaticamente e lhe
+mostrará uma tela repleta de caracteres. Calma! Clique com o botão
+direito na tela e selecione a opção <strong>Save Page As…</strong>. Recomendamos que
+você salve os dados dentro de uma pasta chamada <strong>data</strong> ou <strong>dados</strong>
+para manter o projeto organizado.</p>
+<p>Para importar um CSV para o R, utilize a função <code>read_csv()</code> do pacote
+<code>readr</code>.</p>
+<div class="admonition warning">
+<p class="admonition-title"> Fique atento com o lugar que você salvou os arquivos! </p>
+<p>Neste exemplo, os arquivos estão salvos dentro da pasta <strong>data</strong>.</p>
+</div>
+<p><br/></p>
+<div class="codehilite"><pre><span></span>library(readr)
+
+banco_virgula &lt;- read_csv(&#39;data/candidatos_sp_virgula.csv&#39;)
+</pre></div>
+
+
+<p>Se tudo tiver dado certo, agora você terá um <code>banco_virgula</code> no seu
+ambiente de variáveis. Mas nem sempre um banco de dados é separado por
+vírgula e mesmo assim ele pode ter a extenção <code>.csv</code>.</p>
+<ul>
+<li>Bancos separados por ponto e vírgula <code>;</code>.</li>
+</ul>
+<!-- -->
+
+<div class="codehilite"><pre><span></span>banco_pontovirgula &lt;- read_csv2(&#39;data/candidatos_sp_pontovirgula.csv&#39;)
+</pre></div>
+
+
+<ul>
+<li>Banco separados por tabs <code>\t</code>.</li>
+</ul>
+<!-- -->
+
+<div class="codehilite"><pre><span></span>banco_tab &lt;- read_tsv(&#39;data/candidatos_sp_tab.csv&#39;)
+</pre></div>
+
+
+<ul>
+<li>Banco separados por <code>@</code> ou qualquer outro <code>caractere</code>.</li>
+</ul>
+<!-- -->
+
+<div class="codehilite"><pre><span></span>banco_arroba &lt;- read_delim(&#39;data/candidatos_sp_arroba.csv&#39;, delim = &#39;@&#39;)
+</pre></div>
+
+
+<ul>
+<li>Banco Excel.</li>
+</ul>
+<!-- -->
+
+<div class="codehilite"><pre><span></span>library(readxl)
+
+banco_excel &lt;- read_excel(&#39;data/candidatos_sp_excel.xlsx&#39;)
+</pre></div>
+
+
+<div class="admonition warning">
+<p class="admonition-title"> Repare que o número de linhas do banco Excel é menor! </p>
+</div>
+<p><br/></p>
+<p>Por que isso aconteceu?</p>
+<ul>
+<li>Banco Excel - Abas</li>
+</ul>
+<!-- -->
+
+<div class="codehilite"><pre><span></span>library(readxl)
+
+banco_excel_1 &lt;- read_excel(&#39;data/candidatos_sp_excel.xlsx&#39;, sheet = 1)
+
+banco_excel_1 &lt;- read_excel(&#39;data/candidatos_sp_excel.xlsx&#39;, sheet = 2)
+</pre></div>
+
+
+<ul>
+<li>Banco Stata</li>
+</ul>
+<!-- -->
+
+<div class="codehilite"><pre><span></span>library(haven)
+
+banco_stata &lt;- read_stata(&#39;data/candidatos_sp_stata.dta&#39;)
+</pre></div>
+
+
 <h2 id="5-exercicio-parte-2">5. Exercício - Parte 2<a class="headerlink" href="#5-exercicio-parte-2" title="Permanent link">&para;</a></h2>
 <h3 id="51-dataframes">5.1. DataFrames<a class="headerlink" href="#51-dataframes" title="Permanent link">&para;</a></h3>
 <ol>
+<li>Crie um dataframe com o nome, idade e filme preferido dos seus
+    colegas de turma.</li>
+</ol>
+<div class="admonition question">
+<p class="admonition-title"> Como criar um dataframe? </p>
+<p>Lembre-se que para criar um dataframe utilizamos a função <code>data.frame()</code> e que essa função recebe vetores 
+como parâmetros para cada coluna que desejamos criar. Por exemplo, se você quiser criar uma dataframe com
+uma lista de números basta executar <code>data.frame(lista_numeros = c(1,2,3,4,5,6,7))</code></p>
+</div>
+<ol>
 <li>
-<p>Crie um dataframe com o nome, idade e filme preferido dos seus
-    colegas de turma. Faça um script que documente o passo a passo da
-    criação do dta frame</p>
+<p>Crie uma lista composta por 3 elementos.</p>
+<ul>
+<li>
+<p>Faça um script que documente o passo a passo da criação do
+    dataframe.</p>
 </li>
 <li>
-<p>Crie uma lista composta por 3 elementos. Faça um script que
-    documente o passo a passo da criação do dta frame Como podemos saber
-    o conteúdo do segundo elemento da lista. Utilze a indexação</p>
+<p>Como podemos saber o conteúdo do segundo elemento da lista?
+    Utilze a <strong>indexação</strong>.</p>
+</li>
+</ul>
 </li>
 <li>
 <p>No R temos, bancos para fins didáticos. Para utilizá-los basta usar
     a função data. Para esse exercícios utilizaremos o banco mtcars.
-    Execute <code>data(mtcars)</code>.</p>
+    Execute <code>data(mtcars)</code>. Repare que agora você pode acessar o banco
+    <code>mtcars</code> da mesma maneira que fizemos anteriormente com outros
+    dataframes.</p>
 <ul>
 <li>
 <p>Visualize o banco. Do que se trata?</p>
@@ -1745,11 +1892,12 @@ print(tabela)
 </pre></div>
 
 
-<p><strong>Parabéns!!!</strong> <img alt="🎉" class="emojione" src="https://cdn.jsdelivr.net/emojione/assets/svg/1f389.svg" title=":tada:" /> <img alt="🎉" class="emojione" src="https://cdn.jsdelivr.net/emojione/assets/svg/1f389.svg" title=":tada:" /> <img alt="🎉" class="emojione" src="https://cdn.jsdelivr.net/emojione/assets/svg/1f389.svg" title=":tada:" /></p>
-<p>Enfim, após esse breve resumos de conceitos básicos de programação você
-será capaz de interagir com pacotes com uma vasta variedade de pacotes,
-além de conseguir desenvolver as próprias soluções quando for
-necessário.</p>
+<div class="admonition highlight">
+<p class="admonition-title"> <strong>PARABÉNS!!!</strong> <img alt="🎉" class="emojione" src="https://cdn.jsdelivr.net/emojione/assets/svg/1f389.svg" title=":tada:" /> <img alt="🎉" class="emojione" src="https://cdn.jsdelivr.net/emojione/assets/svg/1f389.svg" title=":tada:" /> <img alt="🎉" class="emojione" src="https://cdn.jsdelivr.net/emojione/assets/svg/1f389.svg" title=":tada:" /> </p>
+<p>Enfim, após esse breve resumos de conceitos básicos de programação você será capaz de interagir com
+pacotes com uma vasta variedade de pacotes, além de conseguir desenvolver as próprias soluções
+quando for necessário.</p>
+</div>
 <h2 id="7-exercicios">7. Exercícios<a class="headerlink" href="#7-exercicios" title="Permanent link">&para;</a></h2>
 <h3 id="exercicio-1-tipos-de-dados">Exercicio 1 - Tipos de dados<a class="headerlink" href="#exercicio-1-tipos-de-dados" title="Permanent link">&para;</a></h3>
 <p>Execute os códigos abaixo e verifique se são dados válidos em R. Caso
@@ -1902,6 +2050,66 @@ vetor_altura &lt;- c()
 </li>
 </ol>
 <h3 id="exercicio-5-importacao-de-dados">Exercicio 5 - Importação de Dados<a class="headerlink" href="#exercicio-5-importacao-de-dados" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Escolha um dos bancos abaixo ou qualquer outro de seu interesse.
+    Baixe o banco, utilize as funções para explorar as variáveis, retire
+    algum resumo de uma variável (média, contagem, etc.).</li>
+</ol>
+<div class="admonition question">
+<p class="admonition-title"> Relembrando as funções </p>
+<p>Você pode utilizar <code>View()</code>, <code>head()</code>, <code>str()</code>, <code>names()</code>, entre outras para ter uma ideia geral do banco de dados.
+Para extrair estatísticas, você pode utilizar <code>mean()</code>, <code>sd()</code>, <code>median()</code>, etc.</p>
+<p>Lembre-se que o Google é o seu melhor amigo! Pesquisa outros comandos que sejam do seu interesse!</p>
+</div>
+<p><center>
+<table>
+<thead>
+<tr class="header">
+<th>Banco</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Banco Eleições</td>
+<td><a href="http://www.tse.jus.br/eleicoes/estatisticas/repositorio-de-dados-eleitorais-1/repositorio-de-dados-eleitorais">Download</a></td>
+</tr>
+<tr class="even">
+<td>Preço Médio de Combustíveis no Brasil</td>
+<td><a href="https://www.kaggle.com/matheusfreitag/gas-prices-in-brazil">Download</a></td>
+</tr>
+<tr class="odd">
+<td>Banco de Pokemons</td>
+<td><a href="https://www.kaggle.com/rounakbanik/pokemon">Download</a></td>
+</tr>
+<tr class="even">
+<td>Vagas de Emprego em Nova Iorque</td>
+<td><a href="https://www.kaggle.com/new-york-city/new-york-city-current-job-postings">Download</a></td>
+</tr>
+</tbody>
+</table></p>
+<p></center></p>
+<h3 id="exercicio-6-desafio">Exercicio 6 - Desafio<a class="headerlink" href="#exercicio-6-desafio" title="Permanent link">&para;</a></h3>
+<p>Com o banco de dados do exercício anterior tente levantar algumas
+hipóteses sobre as relações de variáveis. Por exemplo, “eu acho que X
+causa Y”. Anote todas essas hipóteses.</p>
+<p>Uma vez feito isso, tente:</p>
+<ol>
+<li>
+<p>Criar um gráfico que ressalte a relação entre essas variáveis.</p>
+</li>
+<li>
+<p>Procure rodar um teste estatístico que pronha à prova a sua hipótese
+    (Teste t, ANOVA, regressão linear, regressão logística, etc.).</p>
+</li>
+</ol>
+<div class="admonition question">
+<p class="admonition-title"> Por onde começar? </p>
+<p>Existe um pacote de visualização de dados muito famoso para o R chamado <code>ggplot2</code>. 
+Quanto ao teste estatístico, o R possuí todos os testes citados implementados, ou seja, você não 
+precisa baixar um pacote para aplicá-los. Tente procurar na <em>internet</em>. Existem referências tanto
+em português quanto em inglês.</p>
+</div>
                 
                   
                 
