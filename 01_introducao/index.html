@@ -1055,17 +1055,25 @@ experiência de quem utiliza a linguagem, foi desenvolvido uma IDE
 uma interação melhor com os objetos e rotinas criados com o R. O
 programa tem quatro painéis/seções:</p>
 <p><img alt="" src="../imgs/rstudio_print.png" /></p>
-<div class="codehilite"><pre><span></span><span class="nv">A</span> <span class="o">-</span> <span class="nv">Console</span>: <span class="nv">Local</span> <span class="nv">na</span> <span class="nv">qual</span> <span class="nv">temos</span> <span class="nv">o</span> <span class="nv">R</span> <span class="nv">prompt</span> <span class="nv">e</span> <span class="nv">que</span> <span class="nv">podemos</span> <span class="nv">executar</span> <span class="nv">linha</span> <span class="nv">por</span> <span class="nv">linha</span> <span class="ss">(</span><span class="nv">chamados</span> <span class="nv">de</span> <span class="nv">inputs</span><span class="ss">)</span>. <span class="nv">Al</span>é<span class="nv">m</span> <span class="nv">disso</span>, é <span class="nv">o</span> <span class="nv">local</span> <span class="nv">no</span> <span class="nv">qual</span> <span class="nv">os</span> <span class="nv">resultados</span> <span class="ss">(</span><span class="nv">chamados</span> <span class="nv">de</span> <span class="nv">outputs</span><span class="ss">)</span> <span class="nv">ir</span>ã<span class="nv">o</span> <span class="nv">aparecer</span>.
-
-<span class="nv">B</span> <span class="o">-</span> <span class="nv">File</span><span class="o">/</span><span class="nv">Plots</span><span class="o">/</span><span class="nv">Help</span>: <span class="nv">Nesta</span> <span class="nv">se</span>çã<span class="nv">o</span> <span class="nv">podemos</span> <span class="nv">ter</span> <span class="nv">acesso</span> à<span class="nv">s</span> <span class="nv">pastas</span> <span class="nv">que</span> <span class="nv">estamos</span> <span class="nv">utilizando</span> <span class="nv">durante</span> <span class="nv">as</span> <span class="nv">nossas</span> <span class="nv">rotinas</span> <span class="nv">no</span> <span class="nv">software</span>, <span class="nv">al</span>é<span class="nv">m</span> <span class="nv">de</span> <span class="nv">visualizar</span> <span class="nv">os</span> <span class="nv">gr</span>á<span class="nv">ficos</span> <span class="nv">gerados</span> <span class="nv">a</span> <span class="nv">partir</span> <span class="nv">das</span> <span class="nv">an</span>á<span class="nv">lises</span> <span class="nv">e</span> <span class="nv">verificar</span> <span class="nv">a</span> <span class="nv">documenta</span>çã<span class="nv">o</span> <span class="nv">de</span> <span class="nv">fun</span>çõ<span class="nv">es</span> <span class="nv">e</span> <span class="nv">pacotes</span>, <span class="nv">que</span> <span class="nv">explicaremos</span> <span class="nv">em</span> <span class="nv">breve</span>.
-
-<span class="nv">C</span> <span class="o">-</span> <span class="nv">Workspace</span>: <span class="nv">Os</span> <span class="nv">valores</span> <span class="nv">gerados</span> <span class="nv">no</span> <span class="nv">R</span>, <span class="nv">como</span> <span class="nv">por</span> <span class="nv">exemplo</span>, <span class="nv">vari</span>á<span class="nv">veis</span> <span class="nv">e</span> <span class="nv">tabelas</span> <span class="nv">que</span> <span class="nv">voc</span>ê <span class="nv">definiu</span> <span class="nv">ir</span>ã<span class="nv">o</span> <span class="nv">aparecer</span> <span class="nv">aqui</span>, <span class="nv">sobretudo</span>, <span class="nv">na</span> <span class="nv">aba</span> <span class="nv">Environment</span>. <span class="nv">E</span> <span class="nv">o</span> <span class="nv">hist</span>ó<span class="nv">rico</span> <span class="nv">de</span> <span class="nv">c</span>ó<span class="nv">digos</span> <span class="nv">rodados</span> <span class="nv">na</span> <span class="nv">aba</span> <span class="nv">History</span>. <span class="nv">Veremos</span> <span class="nv">nas</span> <span class="nv">pr</span>ó<span class="nv">ximas</span> <span class="nv">aulas</span> <span class="nv">que</span> <span class="nv">a</span> <span class="nv">aba</span> <span class="nv">Connections</span> é ú<span class="nv">til</span> <span class="nv">caso</span> <span class="nv">estejamos</span> <span class="nv">conectados</span> <span class="nv">com</span> <span class="nv">alguma</span> <span class="nv">base</span> <span class="nv">de</span> <span class="nv">dados</span> <span class="nv">externa</span>, <span class="nv">como</span> <span class="nv">por</span> <span class="nv">exemplo</span>, <span class="nv">Access</span> <span class="nv">ou</span> <span class="nv">PostgreSQL</span>.
-
-<span class="nv">D</span> <span class="o">-</span> <span class="nv">Editor</span>: <span class="nv">Aqui</span> é <span class="nv">onde</span> <span class="nv">os</span> <span class="nv">scripts</span> <span class="nv">s</span>ã<span class="nv">o</span> <span class="nv">escritos</span>. <span class="nv">Scripts</span> <span class="nv">nada</span> <span class="nv">mais</span> <span class="nv">s</span>ã<span class="nv">o</span> <span class="k">do</span> <span class="nv">que</span> <span class="nv">uma</span> <span class="nv">s</span>é<span class="nv">rie</span> <span class="nv">de</span> <span class="nv">comandos</span> <span class="nv">salvos</span> <span class="nv">em</span> <span class="nv">um</span> <span class="nv">arquivo</span>. <span class="nv">Eles</span> <span class="nv">s</span>ã<span class="nv">o</span> ú<span class="nv">teis</span> <span class="nv">para</span> <span class="nv">mantermos</span> <span class="nv">a</span> <span class="nv">reprodutividade</span> <span class="k">do</span> <span class="nv">c</span>ó<span class="nv">digo</span>, <span class="nv">portanto</span>, <span class="nv">sempre</span> <span class="nv">que</span> <span class="nv">formos</span> <span class="nv">utilziar</span> <span class="nv">o</span> <span class="nv">RStudio</span> é <span class="nv">recomendado</span> <span class="nv">escrever</span> <span class="nv">um</span> <span class="nv">script</span>.
-</pre></div>
-
-
-<p>Podemos então começar a escrever nossas primeiras linhas de código!</p>
+<p><strong>A - Console</strong>: Local na qual temos o R prompt e que podemos executar
+linha por linha (chamados de inputs). Além disso, é o local no qual os
+resultados (chamados de outputs) irão aparecer.</p>
+<p><strong>B - File/Plots/Help</strong>: Nesta seção podemos ter acesso às pastas que
+estamos utilizando durante as nossas rotinas no software, além de
+visualizar os gráficos gerados a partir das análises e verificar a
+documentação de funções e pacotes, que explicaremos em breve.</p>
+<p><strong>C - Workspace</strong>: Os valores gerados no R, como por exemplo, variáveis
+e tabelas que você definiu irão aparecer aqui, sobretudo, na aba
+Environment. E o histórico de códigos rodados na aba History. Veremos
+nas próximas aulas que a aba Connections é útil caso estejamos
+conectados com alguma base de dados externa, como por exemplo, Access ou
+PostgreSQL.</p>
+<p><strong>D - Editor</strong>: Aqui é onde os scripts são escritos. Scripts nada mais
+são do que uma série de comandos salvos em um arquivo. Eles são úteis
+para mantermos a reprodutividade do código, portanto, sempre que formos
+utilziar o RStudio é recomendado escrever um script.</p>
+<p>Podemos então começar a escrever nossas primeiras linhas de código!
+<img alt="🎉" class="emojione" src="https://cdn.jsdelivr.net/emojione/assets/svg/1f389.svg" title=":tada:" /> <img alt="🎉" class="emojione" src="https://cdn.jsdelivr.net/emojione/assets/svg/1f389.svg" title=":tada:" /> <img alt="🎉" class="emojione" src="https://cdn.jsdelivr.net/emojione/assets/svg/1f389.svg" title=":tada:" /></p>
 <h3 id="13-abrindo-um-script">1.3. Abrindo um script<a class="headerlink" href="#13-abrindo-um-script" title="Permanent link">&para;</a></h3>
 <p>1- Podemos começar um novo script do zero</p>
 <p>2 - Ou podemos abrir um script que já foi trabalhado</p>
@@ -1551,7 +1559,7 @@ arquivos:</p>
 </li>
 <li>
 <p><a href="https://github.com/p4hUSP/material-bio/raw/master/docs/data/candidatos_sp_stata.dta">Candidatos -
-    Excel</a></p>
+    Stata</a></p>
 </li>
 </ul>
 <p>Às vezes, o navegador não irá fazer o download automaticamente e lhe
@@ -1755,13 +1763,16 @@ pacote com o auxilio de uma função chamada <code class="codehilite"><span clas
 <div class="codehilite"><pre><span></span><span class="n">install</span><span class="p">.</span><span class="n">packages</span><span class="p">(</span><span class="ss">&quot;devtools&quot;</span><span class="p">)</span>
 
 <span class="n">library</span><span class="p">(</span><span class="n">devtools</span><span class="p">)</span>
-
-<span class="n">install_github</span><span class="p">(</span><span class="ss">&quot;abjur/abjutils&quot;</span><span class="p">)</span>
-
-<span class="n">library</span><span class="p">(</span><span class="n">abjutils</span><span class="p">)</span>
 </pre></div>
 
 
+<div class="admonition question">
+<p class="admonition-title"> Pacotes no GitHub </p>
+<p>Caso o seu pacote não esteja liberado no CRAN ou caso deseje ter acesso à versão de 
+desenvolvimento, você irá precisar utilizar a função <code class="codehilite"><span class="n">install_github</span><span class="p">()</span></code> do pacote <code class="codehilite"><span class="n">devtools</span></code>
+que recebe como parâmetro <code class="codehilite"><span class="o">&lt;</span><span class="nv">dono</span><span class="o">-</span><span class="k">do</span><span class="o">-</span><span class="nv">pacote</span><span class="o">&gt;/&lt;</span><span class="nv">nome</span><span class="o">-</span><span class="k">do</span><span class="o">-</span><span class="nv">pacote</span><span class="o">&gt;</span></code>. Por exemplo, <code class="codehilite"><span class="n">install_github</span><span class="p">(</span><span class="ss">&quot;abjur/abjutils&quot;</span><span class="p">)</span></code>.
+Não se esqueça de habilitar o <code class="codehilite"><span class="n">devtools</span></code> com a função <code class="codehilite"><span class="n">library</span><span class="p">(</span><span class="n">devtools</span><span class="p">)</span></code>.</p>
+</div>
 <h2 id="6-controladores-de-fluxo">6. Controladores de Fluxo<a class="headerlink" href="#6-controladores-de-fluxo" title="Permanent link">&para;</a></h2>
 <p>É muito comum estabelecermos uma condição para tomar uma decisão, como
 por exemplo, ‘Porcentagem de votos maior que 50% pode significar

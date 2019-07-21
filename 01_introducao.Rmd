@@ -43,15 +43,15 @@ O _RStudio_ nada mais é que um software, que integrado com o R, permite uma int
 ![](imgs/rstudio_print.png)
 
 
-    A - Console: Local na qual temos o R prompt e que podemos executar linha por linha (chamados de inputs). Além disso, é o local no qual os resultados (chamados de outputs) irão aparecer.
+__A - Console__: Local na qual temos o R prompt e que podemos executar linha por linha (chamados de inputs). Além disso, é o local no qual os resultados (chamados de outputs) irão aparecer.
     
-    B - File/Plots/Help: Nesta seção podemos ter acesso às pastas que estamos utilizando durante as nossas rotinas no software, além de visualizar os gráficos gerados a partir das análises e verificar a documentação de funções e pacotes, que explicaremos em breve.
+__B - File/Plots/Help__: Nesta seção podemos ter acesso às pastas que estamos utilizando durante as nossas rotinas no software, além de visualizar os gráficos gerados a partir das análises e verificar a documentação de funções e pacotes, que explicaremos em breve.
     
-    C - Workspace: Os valores gerados no R, como por exemplo, variáveis e tabelas que você definiu irão aparecer aqui, sobretudo, na aba Environment. E o histórico de códigos rodados na aba History. Veremos nas próximas aulas que a aba Connections é útil caso estejamos conectados com alguma base de dados externa, como por exemplo, Access ou PostgreSQL.
+__C - Workspace__: Os valores gerados no R, como por exemplo, variáveis e tabelas que você definiu irão aparecer aqui, sobretudo, na aba Environment. E o histórico de códigos rodados na aba History. Veremos nas próximas aulas que a aba Connections é útil caso estejamos conectados com alguma base de dados externa, como por exemplo, Access ou PostgreSQL.
     
-    D - Editor: Aqui é onde os scripts são escritos. Scripts nada mais são do que uma série de comandos salvos em um arquivo. Eles são úteis para mantermos a reprodutividade do código, portanto, sempre que formos utilziar o RStudio é recomendado escrever um script.
+__D - Editor__: Aqui é onde os scripts são escritos. Scripts nada mais são do que uma série de comandos salvos em um arquivo. Eles são úteis para mantermos a reprodutividade do código, portanto, sempre que formos utilziar o RStudio é recomendado escrever um script.
     
-Podemos então começar a escrever nossas primeiras linhas de código!
+Podemos então começar a escrever nossas primeiras linhas de código! :tada: :tada: :tada:
 
 ### 1.3. Abrindo um script
 
@@ -481,7 +481,7 @@ Que tal tentar baixar o banco de candidatos? Para isso, baixe os arquivos:
 
 - [Candidatos - Excel](https://github.com/p4hUSP/material-bio/raw/master/docs/data/candidatos_sp_excel.xlsx) 
 
-- [Candidatos - Excel](https://github.com/p4hUSP/material-bio/raw/master/docs/data/candidatos_sp_stata.dta) 
+- [Candidatos - Stata](https://github.com/p4hUSP/material-bio/raw/master/docs/data/candidatos_sp_stata.dta) 
 
 Às vezes, o navegador não irá fazer o download automaticamente e lhe mostrará uma tela repleta de caracteres. Calma! Clique com o botão direito na tela e selecione a opção __Save Page As...__. Recomendamos que você salve os dados dentro de uma pasta chamada __data__ ou __dados__ para manter o projeto organizado.
 
@@ -630,12 +630,14 @@ Caso o pacote não esteja no CRAN, mas sim no Github, devemos instalar o pacote 
 install.packages("devtools")
                                                                    
 library(devtools)
-                                                                   
-install_github("abjur/abjutils")
-                                                                   
-library(abjutils)
 ```
 
+!!! question \" Pacotes no GitHub \"
+
+    Caso o seu pacote não esteja liberado no CRAN ou caso deseje ter acesso à versão de 
+    desenvolvimento, você irá precisar utilizar a função `install_github()` do pacote `devtools`
+    que recebe como parâmetro `<dono-do-pacote>/<nome-do-pacote>`. Por exemplo, `install_github("abjur/abjutils")`.
+    Não se esqueça de habilitar o `devtools` com a função `library(devtools)`.
 
 ## 6. Controladores de Fluxo
 
