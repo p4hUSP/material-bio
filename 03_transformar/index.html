@@ -1,0 +1,870 @@
+
+
+
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Material para cursos de programação e análise de dados">
+      
+      
+        <link rel="canonical" href="https://p4husp.github.io/material-bio/03_transformar/">
+      
+      
+        <meta name="author" content="P4H">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copiar para área de transferência">
+      
+        <meta name="lang:clipboard.copied" content="Copiado para área de transferência">
+      
+        <meta name="lang:search.language" content="en, pt">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="Nenhum resultado encontrado">
+      
+        <meta name="lang:search.result.one" content="1 resultado encontrado">
+      
+        <meta name="lang:search.result.other" content="# resultados encontrados">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.0">
+    
+    
+      
+        <title>Transformando Dados - P4H - Material</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.0284f74d.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.01803549.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#transformando-dados" tabindex="1" class="md-skip">
+        Ir para o conteúdo
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://p4husp.github.io/material-bio/" title="P4H - Material" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              P4H - Material
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Transformando Dados
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Digite para iniciar a busca
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/p4hUSP/material-bio/" title="Ir ao repositório" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    p4husp/material-bio
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://p4husp.github.io/material-bio/" title="P4H - Material" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    P4H - Material
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/p4hUSP/material-bio/" title="Ir ao repositório" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    p4husp/material-bio
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Material" class="md-nav__link">
+      Material
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../01_introducao/" title="Introdução ao R" class="md-nav__link">
+      Introdução ao R
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../02_estruturar/" title="Estruturando Banco" class="md-nav__link">
+      Estruturando Banco
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Transformando Dados
+      </label>
+    
+    <a href="./" title="Transformando Dados" class="md-nav__link md-nav__link--active">
+      Transformando Dados
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Índice</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#aviso-importante" title="Aviso importante!" class="md-nav__link">
+    Aviso importante!
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Índice</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#aviso-importante" title="Aviso importante!" class="md-nav__link">
+    Aviso importante!
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/p4hUSP/material-bio/edit/master/docs/03_transformar.md" title="Editar esta página" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="transformando-dados">Transformando Dados<a class="headerlink" href="#transformando-dados" title="Permanent link">&para;</a></h1>
+<h2 id="aviso-importante">Aviso importante!<a class="headerlink" href="#aviso-importante" title="Permanent link">&para;</a></h2>
+<p>Antes de começar a programar, atualize o R e seus pacotes rodando os
+seguintes comandos:</p>
+<div class="codehilite"><pre><span></span><span class="n">install</span><span class="p">.</span><span class="n">packages</span><span class="p">(</span><span class="ss">&quot;installr&quot;</span><span class="p">)</span>
+
+<span class="n">updateR</span><span class="p">()</span>
+</pre></div>
+
+
+<p>Siga as instruções e em caso de dúvidas procure um monitor. Lembre-se de
+instalar o tidyverse novamente.</p>
+<h1 id="atencao-se-liga-ai-que-e-hora-da-revisao-e-dicas">Atenção! Se liga aí que é hora da revisão (e dicas)!<a class="headerlink" href="#atencao-se-liga-ai-que-e-hora-da-revisao-e-dicas" title="Permanent link">&para;</a></h1>
+<h2 id="scripts">Scripts<a class="headerlink" href="#scripts" title="Permanent link">&para;</a></h2>
+<p>Scripts nada mais são do que uma série de comandos salvos em um arquivo.
+Eles são úteis para mantermos a reprodutividade do código, portanto,
+sempre que formos utilizar o RStudio é recomendado escrever um script.</p>
+<h2 id="vetores">Vetores<a class="headerlink" href="#vetores" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Estrutura básica de dados</li>
+<li>Homogêneo: aceita apenas um tipo de dado</li>
+<li>Indexação por colchetes simples</li>
+<li>Apenas 1 nível</li>
+</ul>
+<h2 id="listas">Listas<a class="headerlink" href="#listas" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Estrutura de dados</li>
+<li>Heterogêneo: aceita mais de um tipo de dado</li>
+<li>Indexação por colchetes duplo</li>
+<li>Múltiplos níveis</li>
+</ul>
+<h2 id="funcoes">Funções<a class="headerlink" href="#funcoes" title="Permanent link">&para;</a></h2>
+<p>O R base, como chamamos o R sem nenhum pacote instalado por nós, já
+contém diversas funções implementadas para realizar ações sobre os dados
+que temos a disposição. Geralmente, o nome das funções já nos dão uma
+noção de suas ações. Por exemplo, a função <code class="codehilite"><span class="n">mean</span><span class="p">()</span></code>, do português média,
+aplica justamente a média sobre os dados informados. Para informar os
+dados e também definir alguns dos comportamentos dessa ação, usamos o
+parâmetros, que ficam dentro dos parênteses de cada função.</p>
+<h2 id="exercicios-de-revisao">Exercícios de revisão<a class="headerlink" href="#exercicios-de-revisao" title="Permanent link">&para;</a></h2>
+<p>Para praticarmos algumas coisas que vimos até agora tente fazer os seguintes exercícios:</p>
+<ol>
+<li>Baixe este
+    <a href="https://drive.google.com/file/d/1tPmuLY3zNxMQBpDlmZz7f2SK7cPdC1rP/view?usp=sharing">arquivo</a>
+    e importe-o para seu projeto do RStudio.</li>
+<li>Calcula a média de colesterol e armazene-a em um objeto chamado
+    med_colesterol.</li>
+<li>Verifique se os valores de colesterol de cada observação são maiores
+    do que a média.</li>
+<li>Separe a coluna age_sex, criando as colunas age e sex com seus
+    respectivos valores.</li>
+</ol>
+<h1 id="dplyr-e-suas-funcoes">dplyr e suas funções<a class="headerlink" href="#dplyr-e-suas-funcoes" title="Permanent link">&para;</a></h1>
+<p>Para tornar a manipulação de dados mais eficiente, foi criado um pacote
+chamado de dplyr que possui uma série de ferramentas para filtrar,
+selecionar e sumarizar informações, como veremos a seguir.</p>
+<h2 id="funcoes_1">Funções<a class="headerlink" href="#funcoes_1" title="Permanent link">&para;</a></h2>
+<p>As principais funções do dplyr são:</p>
+<ol>
+<li>
+<p><code class="codehilite"><span class="n">filter</span></code>: filtra as linhas de um banco de dados de acordo com uma
+    regra lógica.</p>
+</li>
+<li>
+<p><code class="codehilite"><span class="k">select</span></code>: seleciona as colunas de interesse.</p>
+</li>
+<li>
+<p><code class="codehilite"><span class="n">mutate</span></code>: modifica ou cria colunas de acordo com valores fornecidos.</p>
+</li>
+<li>
+<p><code class="codehilite"><span class="k">count</span></code>: conta os valores de uma variável.</p>
+</li>
+<li>
+<p>Especialmente útil para variáveis categóricas.</p>
+</li>
+<li>
+<p><code class="codehilite"><span class="k">rename</span></code>: altera o nome das variáveis (colunas).</p>
+</li>
+<li>
+<p><code class="codehilite"><span class="n">group_by</span></code> e <code class="codehilite"><span class="n">summarise</span></code>: são funções normalmente utilizadas em
+    conjunto. Elas permitem realizar operações de agregações com o banco
+    de dados e, assim, alterar a nossa unidade de análise.</p>
+</li>
+</ol>
+<p>Porém, não ficaremos apenas nestas funções, veremos também algumas de
+suas variações e conheceremos o famoso <code class="codehilite"><span class="c">%&gt;%</span></code> (pipe).</p>
+<p>Para as atividades abaixo vamos usar o mesmo banco utilizado nos
+exercícios.</p>
+<p>Como vimos, o dplyr é um pacote essencial para manipulação de dados e
+uma das suas vantagens é que a forma como aplicamos suas funções segue o
+seguinte padrão:</p>
+<p><code class="codehilite"><span class="n">funcao_dplyr</span><span class="p">(</span><span class="n">banco_de_dados</span><span class="p">,</span> <span class="n">argumentos_especificos</span><span class="p">)</span></code></p>
+<p>Ou seja, o primeiro argumento de qualquer uma das funções é o banco de
+dados, seguido de argumentos específicos de cada função, como por
+exemplo, qual variável criar ou filtrar.</p>
+<h3 id="filter"><code class="codehilite"><span class="n">filter</span><span class="p">()</span></code><a class="headerlink" href="#filter" title="Permanent link">&para;</a></h3>
+<p>Quando estamos fazendo algumas análises, é comum encontrarmos
+observações que não nos interessam, como por exemplo, se estou fazendo
+uma análise sobre pessoas com açúcar no sangue em jejum menor ou igual
+do que 120mg/dl, espero que na minha base de dados tenham apenas pessoas
+que atendam essa condição. Para isso utilizamos o <code class="codehilite"><span class="n">filter</span><span class="p">()</span></code>, vejamos o
+exemplo abaixo:</p>
+<div class="codehilite"><pre><span></span><span class="n">filter</span><span class="p">(</span><span class="n">dados</span><span class="p">,</span> <span class="n">fbs</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Lembra quando vimos operadores lógicos? Pois bem, eles são muito
+utilizados no <code class="codehilite"><span class="n">filter</span><span class="p">()</span></code>. Caso o nosso interesse seja não apenas filtrar
+sobre a taxa de açucar , mas pessoas do sexo masculino adicionamos o
+nome da variável, seguido do condicional</p>
+<div class="codehilite"><pre><span></span><span class="n">filter</span><span class="p">(</span><span class="n">dados</span><span class="p">,</span> <span class="n">fbs</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="n">sex</span> <span class="o">==</span> <span class="ss">&quot;Homem&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>E se além dos filtros propostos também quisermos separar os candidatos
+com Tipo de dor no peito igual a 1 e 4? Para fazer esse filtro podemos
+utilizar o operador <code class="codehilite"><span class="nf">%in</span><span class="o">%</span></code>! Ele basicamente nos ajuda a filtrar mais de
+um tipo de categoria de uma variável, uma vez que o operador <code class="codehilite"><span class="o">==</span></code>
+compara apenas uma categoria.</p>
+<div class="codehilite"><pre><span></span><span class="n">filter</span><span class="p">(</span><span class="n">dados</span><span class="p">,</span> <span class="n">fbs</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="n">sex</span> <span class="o">==</span> <span class="ss">&quot;Homem&quot;</span><span class="p">,</span> <span class="n">cp</span> <span class="o">%</span><span class="k">in</span><span class="o">%</span> <span class="k">c</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span> <span class="o">#</span> <span class="n">perceba</span> <span class="n">a</span> <span class="n">importancia</span> <span class="n">de</span> <span class="n">colocar</span> <span class="k">as</span> <span class="n">categorias</span> <span class="n">que</span> <span class="n">serao</span> <span class="n">filtradas</span> <span class="n">dentro</span> <span class="n">de</span> <span class="n">um</span> <span class="n">vetor</span>
+</pre></div>
+
+
+<p>Vamos aproveitar para filtrar os casos em que os pacientes não tiveram
+angina induzida por exercício e guardar esse dado em um objeto chamado
+<code class="codehilite"><span class="n">amostra1</span></code>.</p>
+<div class="codehilite"><pre><span></span><span class="n">amostra1</span> <span class="o">&lt;-</span> <span class="nf">filter</span><span class="p">(</span><span class="n">dados</span><span class="p">,</span> <span class="n">fbs</span> <span class="o">==</span> <span class="m">0</span><span class="p">,</span> <span class="n">sex</span> <span class="o">==</span> <span class="s">&quot;Homem&quot;</span><span class="p">,</span> <span class="n">cp</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">4</span><span class="p">),</span> <span class="n">exang</span> <span class="o">!=</span> <span class="m">1</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Agora temos uma outra base de dados para analisarmos. Vamos conhecer
+então o <code class="codehilite"><span class="k">select</span><span class="p">()</span></code>.</p>
+<h3 id="select"><code class="codehilite"><span class="k">select</span><span class="p">()</span></code><a class="headerlink" href="#select" title="Permanent link">&para;</a></h3>
+<p>Em muitas situações nós não trabalhamos com todas as variáveis do banco
+de dados; para removermos aquelas colunas que não iremos utilizar,
+adotamos a função <code class="codehilite"><span class="k">select</span><span class="p">()</span></code>. Vamos selecionar apenas a idade e a
+pressão sanguínea.</p>
+<div class="codehilite"><pre><span></span><span class="k">select</span><span class="p">(</span><span class="n">amostra1</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">trestbps</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Percebeu o padrão dessa função? Basicamente é o banco de dados e as
+variáveis que queremos selecionar. Mas e se quisermos visualizar todas
+as variáveis com exceção de algumas?</p>
+<div class="codehilite"><pre><span></span><span class="k">select</span><span class="p">(</span><span class="n">amostra1</span><span class="p">,</span> <span class="o">-</span><span class="n">target</span><span class="p">,</span> <span class="o">-</span><span class="n">restecg</span><span class="p">)</span>
+</pre></div>
+
+
+<p>No exemplo acima estamos retirando as variáveis target e restecg
+colocando um <code class="codehilite"><span class="o">-</span></code> na frente dessas variáveis.</p>
+<p>Para darmos continuidade às outras funções vamos retirar algumas
+variáveis</p>
+<div class="codehilite"><pre><span></span><span class="n">amostra1</span> <span class="o">&lt;-</span> <span class="nf">select</span><span class="p">(</span><span class="n">amostra1</span><span class="p">,</span> <span class="o">-</span><span class="n">slope</span><span class="p">,</span> <span class="o">-</span><span class="n">ca</span><span class="p">,</span> <span class="o">-</span><span class="n">thal</span><span class="p">)</span>
+</pre></div>
+
+
+<h3 id="mutate"><code class="codehilite"><span class="n">mutate</span><span class="p">()</span></code><a class="headerlink" href="#mutate" title="Permanent link">&para;</a></h3>
+<p>Caso tenhamos interesse em alterar ou criar uma variável, podemos
+utilizar o <code class="codehilite"><span class="n">mutate</span><span class="p">()</span></code>. A função tem o seguinte formato:
+<code class="codehilite"><span class="n">mutate</span><span class="p">(</span><span class="n">bando_de_dados</span><span class="p">,</span> <span class="n">coluna_nova</span><span class="o">|</span><span class="n">coluna_existente</span> <span class="o">=</span> <span class="n">valor</span><span class="p">)</span></code>.</p>
+<p>Vamos aproveitar e alterar a variável de idade <code class="codehilite"><span class="n">age</span></code> para númerico</p>
+<div class="codehilite"><pre><span></span><span class="n">amostra1</span> <span class="o">&lt;-</span> <span class="nf">mutate</span><span class="p">(</span><span class="n">amostra1</span><span class="p">,</span>
+<span class="n">age</span> <span class="o">=</span> <span class="nf">as.numeric</span><span class="p">(</span><span class="n">age</span><span class="p">))</span>
+
+<span class="n">amostra1</span>
+</pre></div>
+
+
+<p>Simples não? Além disso, podemos criar variáveis categóricas, como por
+exemplo, uma variável que identifica se a pessoa tem uma idade maior ou
+menor de 60 anos.</p>
+<div class="codehilite"><pre><span></span><span class="n">amostra1</span> <span class="o">&lt;-</span> <span class="nf">mutate</span><span class="p">(</span><span class="n">amostra1</span><span class="p">,</span> <span class="n">CATEGORIA_IDADE</span> <span class="o">=</span> <span class="nf">ifelse</span><span class="p">(</span><span class="n">age</span> <span class="o">&gt;=</span> <span class="m">60</span><span class="p">,</span> <span class="s">&quot;IDOSO&quot;</span><span class="p">,</span> <span class="s">&quot;ADULTO&quot;</span><span class="p">))</span>
+
+<span class="n">amostra1</span>
+</pre></div>
+
+
+<p>Perceba que para criar essa variável utilizamos uma função chamada
+<code class="codehilite"><span class="n">ifelse</span><span class="p">()</span></code>. Basicamente esta função é um if em que o primeiro parâmetro
+é a condição lógica, o segundo é a ação em caso de a condição ser
+verdadeira e o terceiro é a ação no caso de a condição ser falsa. Assim,
+no caso acima ele pergunta: Se o valor da variável age for menor à 60,
+classificamos como “ADULTO”, caso negativo, “IDOSO”.</p>
+<p>Agora que criamos a variável “CATEGORIA_IDADE”, quantas pessoas são
+idosas neste experimento? Para respondermos isso podemos utilizar a
+função <code class="codehilite"><span class="k">count</span><span class="p">()</span></code></p>
+<h3 id="count"><code class="codehilite"><span class="k">count</span><span class="p">()</span></code><a class="headerlink" href="#count" title="Permanent link">&para;</a></h3>
+<p>Em uma tradução literal, o <code class="codehilite"><span class="k">count</span><span class="p">()</span></code> irá contar as categorias de uma
+variável.</p>
+<div class="codehilite"><pre><span></span><span class="n">tabela_cat_idade</span> <span class="o">&lt;-</span> <span class="nf">count</span><span class="p">(</span><span class="n">amostra1</span><span class="p">,</span> <span class="n">CATEGORIA_IDADE</span><span class="p">)</span>
+
+<span class="n">tabela_cat_idade</span>
+</pre></div>
+
+
+<p>Portanto, podemos notar que existem mais adultos em nossa amostra.</p>
+<h3 id="rename"><code class="codehilite"><span class="k">rename</span><span class="p">()</span></code><a class="headerlink" href="#rename" title="Permanent link">&para;</a></h3>
+<p>Se quisermos renomear o nome das variáveis temos que utilizar o
+<code class="codehilite"><span class="k">rename</span><span class="p">()</span></code> que tem o seguinte padrão:</p>
+<p><code class="codehilite"><span class="k">rename</span><span class="p">(</span><span class="n">bando_de_dados</span><span class="p">,</span> <span class="n">nome_novo</span> <span class="o">=</span> <span class="n">nome_antigo</span><span class="p">)</span></code></p>
+<div class="codehilite"><pre><span></span><span class="n">tabela_cat_idade</span> <span class="o">&lt;-</span> <span class="nf">rename</span><span class="p">(</span><span class="n">tabela_cat_idade</span><span class="p">,</span> <span class="n">Quantidade</span> <span class="o">=</span> <span class="n">n</span><span class="p">)</span>
+
+<span class="n">tabela_cat_idade</span>
+</pre></div>
+
+
+<h3 id="group_by-e-summarise"><code class="codehilite"><span class="n">group_by</span><span class="p">()</span></code> e <code class="codehilite"><span class="n">summarise</span><span class="p">()</span></code><a class="headerlink" href="#group_by-e-summarise" title="Permanent link">&para;</a></h3>
+<p>O <code class="codehilite"><span class="n">group_by</span><span class="p">()</span></code> e <code class="codehilite"><span class="n">summarise</span><span class="p">()</span></code> são funções que trabalham, na maioria das
+vezes, juntas. Eles servem para sumarizar os dados de acordo com grupos,
+ou seja, a contagem que haviamos feito com o <code class="codehilite"><span class="k">count</span><span class="p">()</span></code> pode ser
+reproduzida aqui da seguinte forma:</p>
+<div class="codehilite"><pre><span></span><span class="n">temp_1</span> <span class="o">&lt;-</span> <span class="nf">group_by</span><span class="p">(</span><span class="n">amostra1</span><span class="p">,</span> <span class="n">CATEGORIA_IDADE</span><span class="p">)</span>
+
+<span class="n">temp_1</span>
+
+<span class="nf">summarise</span><span class="p">(</span><span class="n">temp_1</span><span class="p">,</span> <span class="n">Quantidade</span> <span class="o">=</span> <span class="nf">n</span><span class="p">())</span>
+</pre></div>
+
+
+<p>O objeto <code class="codehilite"><span class="n">temp_1</span></code> é uma tabela agrupada! Visualmente ela parece normal,
+porém qualquer operação feita nela será realizada de acordo com os
+grupos nos quais ela encontrou, que neste caso é: ADULTO e IDOSO.</p>
+<p>Quando utilizamos o summarise, iremos agrupar as categorias em torno de
+uma estatística, no caso, a contagem. Para fazer isso, utilizamos a
+função <code class="codehilite"><span class="n">n</span><span class="p">()</span></code>, uma função utilizada para contar obervações. Caso a
+variável que fossemos sumarizar fosse númerica, poderiamos utilizar a
+média (<code class="codehilite"><span class="n">mean</span><span class="p">()</span></code>), mediana (<code class="codehilite"><span class="n">median</span><span class="p">()</span></code>) e assim por diante.</p>
+<p>Portanto, a vantagem do <code class="codehilite"><span class="n">group_by</span><span class="p">()</span></code> e <code class="codehilite"><span class="n">summarise</span><span class="p">()</span></code> é que conseguimos
+sumarizar com outras estatísticas além da contagem. Vejamos o exemplo
+abaixo. Estamos agrupando pela categoria de idade e sexo do indivíduo.
+Após isto, estamos contando o número de observações que apresentam estas
+categorias.</p>
+<div class="codehilite"><pre><span></span><span class="n">temp_2</span> <span class="o">&lt;-</span> <span class="nf">group_by</span><span class="p">(</span><span class="n">dados</span><span class="p">,</span> <span class="n">CATEGORIA_IDADE</span><span class="p">,</span> <span class="n">sex</span><span class="p">)</span>
+
+<span class="nf">summarise</span><span class="p">(</span><span class="n">temp_2</span><span class="p">,</span> <span class="n">Quantidade</span> <span class="o">=</span> <span class="nf">n</span><span class="p">())</span>
+</pre></div>
+
+
+<p>Com isso podemos verificar que houveram maior participação de adultos na amostra.</p>
+<h3 id="_1"><code class="codehilite"><span class="c">%&gt;%</span></code><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p>Até então, vimos as principais funções do <code class="codehilite"><span class="n">dplyr</span></code>. Conseguimos extrair
+uma amostra com características específicas e esboçar algumas conclusões
+sua variabilidade.</p>
+<p>Também poderíamos fazer igual ao código abaixo, porém a interpretação
+desse código se torna mais complexa, uma vez que as ações são realizadas
+de dentro pra fora.</p>
+<div class="codehilite"><pre><span></span><span class="k">rename</span><span class="p">(</span><span class="k">count</span><span class="p">(</span><span class="n">mutate</span><span class="p">(</span><span class="k">select</span><span class="p">(</span><span class="n">filter</span><span class="p">(</span><span class="n">dados</span><span class="p">,</span> <span class="n">fbs</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="n">sex</span> <span class="o">==</span> <span class="ss">&quot;Homem&quot;</span><span class="p">,</span> <span class="n">cp</span> <span class="o">%</span><span class="k">in</span><span class="o">%</span> <span class="k">c</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="n">exang</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">),</span> <span class="o">-</span><span class="n">slope</span><span class="p">,</span> <span class="o">-</span><span class="n">ca</span><span class="p">,</span> <span class="o">-</span><span class="n">thal</span><span class="p">),</span> <span class="n">age</span> <span class="o">=</span> <span class="k">as</span><span class="p">.</span><span class="nb">numeric</span><span class="p">(</span><span class="n">age</span><span class="p">),</span> <span class="n">CATEGORIA_IDADE</span> <span class="o">=</span> <span class="n">ifelse</span><span class="p">(</span><span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">,</span> <span class="ss">&quot;IDOSO&quot;</span><span class="p">,</span> <span class="ss">&quot;ADULTO&quot;</span><span class="p">)),</span> <span class="n">CATEGORIA_IDADE</span><span class="p">),</span> <span class="n">Quantidade</span> <span class="o">=</span> <span class="n">n</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Para solucionar este problema os desenvolvedores do pacote incluiram um
+operador chamado de pipe (<code class="codehilite"><span class="c">%&gt;%</span></code>). Basicamente ele permite que possamos
+contruir códigos de forma linear, como podemos notar abaixo!</p>
+<div class="codehilite"><pre><span></span><span class="n">dados</span> <span class="o">%&gt;%</span>
+
+<span class="n">filter</span><span class="p">(</span><span class="n">fbs</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="n">sex</span> <span class="o">==</span> <span class="ss">&quot;Homem&quot;</span><span class="p">,</span> <span class="n">cp</span> <span class="o">%</span><span class="k">in</span><span class="o">%</span> <span class="k">c</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="n">exang</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%&gt;%</span>
+
+<span class="k">select</span><span class="p">(</span><span class="o">-</span><span class="n">slope</span><span class="p">,</span> <span class="o">-</span><span class="n">ca</span><span class="p">,</span> <span class="o">-</span><span class="n">thal</span><span class="p">)</span> <span class="o">%&gt;%</span>
+
+<span class="n">mutate</span><span class="p">(</span><span class="n">age</span> <span class="o">=</span> <span class="k">as</span><span class="p">.</span><span class="nb">numeric</span><span class="p">(</span><span class="n">age</span><span class="p">),</span>
+
+<span class="n">CATEGORIA_IDADE</span> <span class="o">=</span> <span class="n">ifelse</span><span class="p">(</span><span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">,</span> <span class="ss">&quot;IDOSO&quot;</span><span class="p">,</span> <span class="ss">&quot;ADULTO&quot;</span><span class="p">))</span> <span class="o">%&gt;%</span>
+
+<span class="k">count</span><span class="p">(</span><span class="n">CATEGORIA_IDADE</span><span class="p">)</span> <span class="o">%&gt;%</span>
+
+<span class="k">rename</span><span class="p">(</span><span class="n">Quantidade</span> <span class="o">=</span> <span class="n">n</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Agora podemos interpretar o código acima da seguinte maneira:</p>
+<blockquote>
+<p>Pegamos a nossa base de dados sobre doenças cardíacas com o nome
+“dados”, aplicamos um FILTER para filtrar as observações do banco, em
+seguida o SELECT para removermos colunas que não queremos. Depois
+alteramos e criamos variáveis com MUTATE; contamos o número de
+observações de uma variável com o COUNT e por fim, mudamos o nome de
+uma variável com RENAME.</p>
+</blockquote>
+<p>Você pode estar pensando: Mas que benefício eu tenho com o pipe? Ele
+otimiza o nosso tempo escrevendo o código, já que não precisamos
+escrever os objetos para sobrescrever às saídas e também diminui a
+complexidade do código ao mesmo que aumenta sua legibilidade.</p>
+<p>Em resumo, o pipe, quando utilizado com <code class="codehilite"><span class="n">dplyr</span></code> tem a seguinte
+estrutura:</p>
+<ol>
+<li>
+<p>Banco de dados</p>
+</li>
+<li>
+<p>Operações de manipulação</p>
+</li>
+</ol>
+<h2 id="joins">Joins<a class="headerlink" href="#joins" title="Permanent link">&para;</a></h2>
+<p>Muitas vezes precisamos combinar informações de tabelas diferentes para
+conseguir responder as nossas perguntas. Vejamos as tabelas abaixo:</p>
+<div class="codehilite"><pre><span></span><span class="n">knitr</span><span class="p">::</span><span class="n">include_graphics</span><span class="p">(</span><span class="ss">&quot;imgs/join.png&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Estas duas tabelas são referentes à nível de colesterol de alguns
+pacientes e aos registros de atividades físicas feitas pelos pacientes
+por semana; elas são duas tabelas diferentes ligadas apenas pela
+variável “ID”. Sendo assim, para conectá-las precisaremos fazer com que
+exista um match entre ID. Aqui entram os diferentes tipos de ‘joins’.</p>
+<p>Os <code class="codehilite"><span class="o">*</span><span class="n">_join</span><span class="p">()</span></code> nada mais são que funções que ajudam a combinar duas
+tabelas através de uma “variável de ligação”, que normalmente costuma
+ser uma variável de identificação única da observação, como por exemplo,
+o CPF de um indivíduo.</p>
+<div class="codehilite"><pre><span></span><span class="n">tbl_colesterol</span> <span class="o">&lt;-</span> <span class="nf">data.frame</span><span class="p">(</span><span class="n">ID</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;112&quot;</span><span class="p">,</span> <span class="s">&quot;132&quot;</span><span class="p">,</span> <span class="s">&quot;345&quot;</span><span class="p">,</span> <span class="s">&quot;500&quot;</span><span class="p">),</span>
+
+<span class="n">NOME</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;CAIO&quot;</span><span class="p">,</span> <span class="s">&quot;MARIA&quot;</span><span class="p">,</span> <span class="s">&quot;ENZO&quot;</span><span class="p">,</span> <span class="s">&quot;JULIA&quot;</span><span class="p">),</span>
+
+<span class="n">COLESTEROL</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">233</span><span class="p">,</span> <span class="m">226</span><span class="p">,</span> <span class="m">142</span><span class="p">,</span> <span class="m">105</span><span class="p">),</span>
+
+<span class="n">stringsAsFactors</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span> <span class="c1"># PARA EVITAR QUE OS DADOS SEJAM TRANSFORMADOS EM CATEGORICOS</span>
+
+<span class="n">tbl_atfisica</span> <span class="o">&lt;-</span> <span class="nf">data.frame</span><span class="p">(</span><span class="n">ID_PACIENTE</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;132&quot;</span><span class="p">,</span> <span class="s">&quot;600&quot;</span><span class="p">,</span> <span class="s">&quot;500&quot;</span><span class="p">,</span> <span class="s">&quot;345&quot;</span><span class="p">,</span> <span class="s">&quot;700&quot;</span><span class="p">),</span>
+
+<span class="n">TIPO</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;Futebol&quot;</span><span class="p">,</span> <span class="s">&quot;Caminhada&quot;</span><span class="p">,</span> <span class="s">&quot;Corrida&quot;</span><span class="p">,</span> <span class="s">&quot;Corrida&quot;</span><span class="p">,</span> <span class="s">&quot;Natação&quot;</span><span class="p">),</span>
+
+<span class="n">DURACAO_HORAS</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">0.5</span><span class="p">,</span> <span class="m">3</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">),</span>
+
+<span class="n">ID_atfisica</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;12&quot;</span><span class="p">,</span> <span class="s">&quot;33&quot;</span><span class="p">,</span> <span class="s">&quot;12&quot;</span><span class="p">,</span> <span class="s">&quot;38&quot;</span><span class="p">,</span> <span class="s">&quot;55&quot;</span><span class="p">),</span>
+
+<span class="n">stringsAsFactors</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
+</pre></div>
+
+
+<h3 id="inner_join"><code class="codehilite"><span class="n">inner_join</span><span class="p">()</span></code><a class="headerlink" href="#inner_join" title="Permanent link">&para;</a></h3>
+<p>O primeiro join que veremos é o <code class="codehilite"><span class="n">inner_join</span><span class="p">()</span></code>, que retorna a
+intersecção das tabelas <code class="codehilite"><span class="n">tbl_colesterol</span></code> e <code class="codehilite"><span class="n">tbl_atfisica</span></code>, ou seja, a
+saída é uma nova tabela com informações em comum entre os dados. No caso
+exemplificado, o resultado são três observações em comum entre as
+tabelas dado o mesmo ID.</p>
+<p>Perceba que para montar a função de join, precisamos de três argumentos:</p>
+<ul>
+<li>
+<p>x: que aqui chamaremos de tabela à esquerda</p>
+</li>
+<li>
+<p>y: que aqui chamaremos de tabela à direita</p>
+</li>
+<li>
+<p>by: argumento que especifica qual é a variável de ligação entre as
+    tabelas. Caso a variável tenha o mesmo nome das duas tabelas, você
+    pode colocar apenas o nome da variável, como por exemplo,
+    <code class="codehilite"><span class="k">by</span> <span class="o">=</span> <span class="ss">&quot;ID&quot;</span></code>. Porém, caso os nomes sejam diferentes o padrão para
+    especificar é
+    <code class="codehilite"><span class="k">by</span> <span class="o">=</span> <span class="k">c</span><span class="p">(</span><span class="ss">&quot;variavel_tbl_esquerda&quot;</span> <span class="o">=</span> <span class="ss">&quot;variavel_tbl_direita&quot;</span><span class="p">)</span></code>.</p>
+</li>
+</ul>
+<!-- -->
+
+<div class="codehilite"><pre><span></span><span class="n">inner_join</span><span class="p">(</span><span class="n">tbl_colesterol</span><span class="p">,</span> <span class="n">tbl_atfisica</span><span class="p">,</span> <span class="k">by</span> <span class="o">=</span> <span class="k">c</span><span class="p">(</span><span class="ss">&quot;ID&quot;</span> <span class="o">=</span> <span class="ss">&quot;ID_PACIENTE&quot;</span><span class="p">))</span>
+</pre></div>
+
+
+<h3 id="left_join-e-right_join"><code class="codehilite"><span class="n">left_join</span><span class="p">()</span></code> e <code class="codehilite"><span class="n">right_join</span><span class="p">()</span></code><a class="headerlink" href="#left_join-e-right_join" title="Permanent link">&para;</a></h3>
+<p>Nesse caso pensamos se queremos que a nossa tabela pós join tenha o
+número de linhas da tabela da esqueda (<code class="codehilite"><span class="n">left_join</span></code>) ou da tabela da
+direita (<code class="codehilite"><span class="n">right_join</span></code>), utilizando o mesmo padrão do exemplo anterior.</p>
+<div class="codehilite"><pre><span></span><span class="o">#</span> <span class="k">Left</span> <span class="k">join</span>
+
+<span class="n">left_join</span><span class="p">(</span><span class="n">tbl_colesterol</span><span class="p">,</span> <span class="n">tbl_atfisica</span><span class="p">,</span> <span class="k">by</span> <span class="o">=</span> <span class="k">c</span><span class="p">(</span><span class="ss">&quot;ID&quot;</span> <span class="o">=</span> <span class="ss">&quot;ID_PACIENTE&quot;</span><span class="p">))</span>
+</pre></div>
+
+
+<p>Perceba que todas as observações da tabela da esquerda estão no
+resultado final, porém o ID de número 500 tem observações missing. Isso
+se dá devido ao fato de que na tabela da direita não existe referência
+ao seu ID.</p>
+<p>Caso o intuito seja manter todas as linhas da tabela da direita
+utilizamos o <code class="codehilite"><span class="n">right_join</span></code>.</p>
+<div class="codehilite"><pre><span></span><span class="o">#</span> <span class="k">Right</span> <span class="k">join</span>
+
+<span class="n">right_join</span><span class="p">(</span><span class="n">tbl_colesterol</span><span class="p">,</span> <span class="n">tbl_atfisica</span><span class="p">,</span> <span class="k">by</span> <span class="o">=</span> <span class="k">c</span><span class="p">(</span><span class="ss">&quot;ID&quot;</span> <span class="o">=</span> <span class="ss">&quot;ID_PACIENTE&quot;</span><span class="p">))</span>
+</pre></div>
+
+
+<h3 id="full_join"><code class="codehilite"><span class="n">full_join</span><span class="p">()</span></code><a class="headerlink" href="#full_join" title="Permanent link">&para;</a></h3>
+<p>Mas se quisermos juntar todas as observações das duas tabelas podemos
+utilizar o <code class="codehilite"><span class="n">full_join</span></code></p>
+<div class="codehilite"><pre><span></span><span class="n">full_join</span><span class="p">(</span><span class="n">tbl_colesterol</span><span class="p">,</span> <span class="n">tbl_atfisica</span><span class="p">,</span> <span class="k">by</span> <span class="o">=</span> <span class="k">c</span><span class="p">(</span><span class="ss">&quot;ID&quot;</span> <span class="o">=</span> <span class="ss">&quot;ID_PACIENTE&quot;</span><span class="p">))</span>
+</pre></div>
+
+
+<h3 id="anti_join"><code class="codehilite"><span class="n">anti_join</span><span class="p">()</span></code><a class="headerlink" href="#anti_join" title="Permanent link">&para;</a></h3>
+<p>E se quisermos somente as observações que não dão match entre as
+tabelas? Usamos <code class="codehilite"><span class="n">anti_join</span><span class="p">()</span></code>. Porém, neste caso, temos que mudar a
+ordem das tabelas para observar quais casos não deram match.</p>
+<div class="codehilite"><pre><span></span><span class="nv">anti_join</span><span class="ss">(</span><span class="nv">tbl_colesterol</span>, <span class="nv">tbl_atfisica</span>, <span class="nv">by</span> <span class="o">=</span> <span class="nv">c</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">ID</span><span class="s2">&quot;</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">ID_PACIENTE</span><span class="s2">&quot;</span><span class="ss">))</span>
+
+<span class="nv">anti_join</span><span class="ss">(</span><span class="nv">tbl_atfisica</span>, <span class="nv">tbl_colesterol</span>, <span class="nv">by</span> <span class="o">=</span> <span class="nv">c</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">ID_PACIENTE</span><span class="s2">&quot;</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">ID</span><span class="s2">&quot;</span><span class="ss">))</span> # <span class="nv">lembre</span><span class="o">-</span><span class="nv">se</span> <span class="nv">de</span> <span class="nv">alterar</span> <span class="nv">a</span> <span class="nv">ordem</span> <span class="k">do</span> <span class="nv">by</span>
+</pre></div>
+
+
+<h1 id="wrap-up">Wrap-up<a class="headerlink" href="#wrap-up" title="Permanent link">&para;</a></h1>
+<p>Vamos juntar tudo o que aprendemos e tirar alguma informação dos dados?
+Exiba a média de colesterol SOMENTE das pessoas em que o valor da
+pressão sanguínea foi maior que a média das observações por sexo e
+categoria de idade. Tente usar o pipe <code class="codehilite"><span class="c">%&gt;%</span></code></p>
+<h2 id="respostas-exercicios-de-revisao">Respostas - Exercícios de revisão<a class="headerlink" href="#respostas-exercicios-de-revisao" title="Permanent link">&para;</a></h2>
+<p>Exercício 1</p>
+<div class="codehilite"><pre><span></span><span class="n">dados</span> <span class="o">&lt;-</span> <span class="nf">read_csv</span><span class="p">(</span><span class="s">&#39;heart_mod2.txt&#39;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Exercício 2</p>
+<div class="codehilite"><pre><span></span><span class="n">media_colesterol</span> <span class="o">&lt;-</span> <span class="nf">mean</span><span class="p">(</span><span class="n">dados</span><span class="o">$</span><span class="n">chol</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Exercício 3</p>
+<div class="codehilite"><pre><span></span><span class="n">media_colesterol</span> <span class="o">&gt;</span> <span class="n">dados$chol</span>
+</pre></div>
+
+
+<p>Exercício 4</p>
+<div class="codehilite"><pre><span></span><span class="n">dados</span> <span class="o">&lt;-</span> <span class="nf">separate</span><span class="p">(</span><span class="n">dados</span><span class="p">,</span> <span class="n">age_sex</span><span class="p">,</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#39;age&#39;</span><span class="p">,</span> <span class="s">&#39;sex&#39;</span><span class="p">),</span> <span class="n">sep</span> <span class="o">=</span> <span class="s">&#39;/&#39;</span><span class="p">)</span>
+</pre></div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../02_estruturar/" title="Estruturando Banco" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Anterior
+                </span>
+                Estruturando Banco
+              </span>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2019 Programação para Humanidades
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/p4husp" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://facebook.com/p4husp" class="md-footer-social__link fa fa-facebook"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.245445c6.js"></script>
+      
+        
+        
+          
+          <script src="../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+          
+            
+              
+              
+                <script src="../assets/javascripts/lunr/lunr.pt.js"></script>
+              
+            
+          
+          
+            <script src="../assets/javascripts/lunr/lunr.multi.js"></script>
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>

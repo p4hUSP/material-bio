@@ -2,17 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>https://p4husp.github.io/material-bio/</loc>
-     <lastmod>2019-07-23</lastmod>
+     <lastmod>2019-07-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://p4husp.github.io/material-bio/01_introducao/</loc>
-     <lastmod>2019-07-23</lastmod>
+     <lastmod>2019-07-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://p4husp.github.io/material-bio/02_estruturar/</loc>
-     <lastmod>2019-07-23</lastmod>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://p4husp.github.io/material-bio/03_transformar/</loc>
+     <lastmod>2019-07-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
