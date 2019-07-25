@@ -1,0 +1,1035 @@
+
+
+
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Material para cursos de programação e análise de dados">
+      
+      
+        <link rel="canonical" href="https://p4husp.github.io/material-bio/04_visualizacao/">
+      
+      
+        <meta name="author" content="P4H">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copiar para área de transferência">
+      
+        <meta name="lang:clipboard.copied" content="Copiado para área de transferência">
+      
+        <meta name="lang:search.language" content="en, pt">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="Nenhum resultado encontrado">
+      
+        <meta name="lang:search.result.one" content="1 resultado encontrado">
+      
+        <meta name="lang:search.result.other" content="# resultados encontrados">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.0">
+    
+    
+      
+        <title>Visualização - P4H - Material</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.0284f74d.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.01803549.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#visualizacao" tabindex="1" class="md-skip">
+        Ir para o conteúdo
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://p4husp.github.io/material-bio/" title="P4H - Material" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              P4H - Material
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Visualização
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Digite para iniciar a busca
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/p4hUSP/material-bio/" title="Ir ao repositório" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    p4husp/material-bio
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://p4husp.github.io/material-bio/" title="P4H - Material" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    P4H - Material
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/p4hUSP/material-bio/" title="Ir ao repositório" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    p4husp/material-bio
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Material" class="md-nav__link">
+      Material
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../01_introducao/" title="Introdução ao R" class="md-nav__link">
+      Introdução ao R
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../02_estruturar/" title="Estruturando Banco" class="md-nav__link">
+      Estruturando Banco
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../03_transformar/" title="Transformando Dados" class="md-nav__link">
+      Transformando Dados
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Visualização
+      </label>
+    
+    <a href="./" title="Visualização" class="md-nav__link md-nav__link--active">
+      Visualização
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Índice</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-ggplot2" title="1. ggplot2" class="md-nav__link">
+    1. ggplot2
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercicio" title="Exercício" class="md-nav__link">
+    Exercício
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ggplot2" title="ggplot2" class="md-nav__link">
+    ggplot2
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#geom95col" title="geom_col()" class="md-nav__link">
+    geom_col()
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercicio_1" title="Exercício" class="md-nav__link">
+    Exercício
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geom95histogram" title="geom_histogram()" class="md-nav__link">
+    geom_histogram()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geom95boxplot-e-geom95violin" title="geom_boxplot() e geom_violin()" class="md-nav__link">
+    geom_boxplot() e geom_violin()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geom95line" title="geom_line()" class="md-nav__link">
+    geom_line()
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercicio_2" title="Exercício" class="md-nav__link">
+    Exercício
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-corrplot" title="2. corrplot" class="md-nav__link">
+    2. corrplot
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Índice</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-ggplot2" title="1. ggplot2" class="md-nav__link">
+    1. ggplot2
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercicio" title="Exercício" class="md-nav__link">
+    Exercício
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ggplot2" title="ggplot2" class="md-nav__link">
+    ggplot2
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#geom95col" title="geom_col()" class="md-nav__link">
+    geom_col()
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercicio_1" title="Exercício" class="md-nav__link">
+    Exercício
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geom95histogram" title="geom_histogram()" class="md-nav__link">
+    geom_histogram()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geom95boxplot-e-geom95violin" title="geom_boxplot() e geom_violin()" class="md-nav__link">
+    geom_boxplot() e geom_violin()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geom95line" title="geom_line()" class="md-nav__link">
+    geom_line()
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercicio_2" title="Exercício" class="md-nav__link">
+    Exercício
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-corrplot" title="2. corrplot" class="md-nav__link">
+    2. corrplot
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/p4hUSP/material-bio/edit/master/docs/04_visualizacao.md" title="Editar esta página" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="visualizacao">Visualização<a class="headerlink" href="#visualizacao" title="Permanent link">&para;</a></h1>
+<p>As visualizações gráficas são muito importantes para transmitir
+informações. Podemos dizer até que ela é fundamental para análise de
+dados, nos ajudando a responder questões, tomar decisões, contar
+histórias e até mesmo inspirar. Veremos não só como fazer estas
+visualizações, mas também a entender quando elas podem ser necessárias.</p>
+<p>Além disso, vamos aproveitar para rever alguns tópicos de aulas passadas
+porém utilizando um banco de dados sobre diabetes no povo Pima, nativos
+dos EUA e que vivem na parte sul do estado de Arizona. Para ter mais
+contexto do dado que iremos trabalhar, o povo Pima foram foco de estudos
+devido à alta presença de diabetes tipo 2, causado sobretudo, pela
+mudança da agricultura tradicional para comidas processadas.</p>
+<p>O banco de dados possuí 768 mulheres com 8 variáveis:</p>
+<table>
+<colgroup>
+<col style="width: 73%" />
+<col style="width: 26%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variável</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Pregnancies</td>
+<td>Número de gravidezes</td>
+</tr>
+<tr class="even">
+<td>Glucose</td>
+<td>Concetração de plasma glucose</td>
+</tr>
+<tr class="odd">
+<td>BloodPressure</td>
+<td>Pressão Sanguínea (mm Hg)</td>
+</tr>
+<tr class="even">
+<td>SkinThickness</td>
+<td>Espessura da dobra da pele do tríceps (mm)</td>
+</tr>
+<tr class="odd">
+<td>Insulin</td>
+<td>Insulina (mu U/ml)</td>
+</tr>
+<tr class="even">
+<td>BMI</td>
+<td>Indíce de Massa corpórea (IMC)</td>
+</tr>
+<tr class="odd">
+<td>DiabetesPedigreeFunction</td>
+<td>Diabetes pedigree function</td>
+</tr>
+<tr class="even">
+<td>Age</td>
+<td>Idade (anos)</td>
+</tr>
+<tr class="odd">
+<td>Outcome</td>
+<td>Variável que indica de a pessoa tem ou não diabetes (1 = Sim, 0 = Não)</td>
+</tr>
+</tbody>
+</table>
+
+<p>Vamos aprender a fazer visualizacões?</p>
+<ul>
+<li><a href="https://github.com/p4hUSP/material-bio/raw/master/docs/data/diabetes2.csv">Download do
+    Banco</a></li>
+</ul>
+<p>Sempre é bom recaptular. Para abrir este banco vamos precisar usar qual
+pacote?</p>
+<div class="codehilite"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="o">&lt;</span><span class="n">pacote</span><span class="o">&gt;</span><span class="p">)</span>
+
+<span class="n">banco</span> <span class="o">&lt;-</span> <span class="n">read_</span><span class="o">&lt;</span><span class="n">nome</span><span class="o">&gt;</span><span class="p">(</span><span class="o">&lt;</span><span class="n">caminho_do_arquivo</span><span class="o">&gt;</span><span class="p">)</span>
+</pre></div>
+
+
+<h2 id="1-ggplot2">1. ggplot2<a class="headerlink" href="#1-ggplot2" title="Permanent link">&para;</a></h2>
+<p>Antes de irmos diretamente para as visualizações vamos habilitar alguns
+pacotes:</p>
+<div class="codehilite"><pre><span></span><span class="n">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">)</span>
+
+<span class="n">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
+
+<span class="o">#</span><span class="n">install</span><span class="p">.</span><span class="n">packages</span><span class="p">(</span><span class="ss">&quot;corrplot&quot;</span><span class="p">)</span>
+<span class="n">library</span><span class="p">(</span><span class="n">corrplot</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Habilitamos dois pacotes novos, o <code class="codehilite"><span class="n">ggplot2</span></code> e o <code class="codehilite"><span class="n">corrplot</span></code>. O primeiro
+deles é o principal pacote para visualizações no R, possibilitando criar
+gráficos exatamente da forma que você quiser, sobretudo, porque ele
+funciona em um esquema de layers.</p>
+<p>O segundo pacote é feito para visualizarmos correlações entre variáveis.
+Apesar dele não fazer parte do <code class="codehilite"><span class="n">ggplot2</span></code>, é uma otíma alternativa para
+matrizes de correlação.</p>
+<p>Mas antes vamos tratar de entender a nossa base de dados e fazer algumas
+manipulações nela.</p>
+<p>A primeira coisa que iremos fazer é aplicar a função <code class="codehilite"><span class="n">glimpse</span><span class="p">()</span></code> do
+<code class="codehilite"><span class="n">dplyr</span></code>. Elas nos possibilita ver as nossas variáveis sem precisar abrir
+o banco inteiro.</p>
+<div class="codehilite"><pre><span></span><span class="n">glimpse</span><span class="p">(</span><span class="n">banco</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Pode-se notar que todas as variáveis parecem ok, apenas uma que precisa
+ser alterada, qual seria?</p>
+<p><br/></p>
+<p>Se você pensou em Outcome, esta correta(o)! Temos que transformar esta
+variável em fator (categórica), vamos lá?</p>
+<h3 id="exercicio">Exercício<a class="headerlink" href="#exercicio" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Transforme a variável <code class="codehilite"><span class="n">Outcome</span></code> em fator.</li>
+</ol>
+<!-- -->
+
+<div class="codehilite"><pre><span></span><span class="n">banco</span> <span class="o">&lt;-</span> <span class="n">banco</span> <span class="o">%&gt;%</span> 
+  <span class="nf">mutate</span><span class="p">(</span><span class="n">Outcome</span> <span class="o">=</span> <span class="nf">factor</span><span class="p">(</span><span class="n">Outcome</span><span class="p">,</span> <span class="n">levels</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">1</span><span class="p">),</span> <span class="n">labels</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;Nao&quot;</span><span class="p">,</span> <span class="s">&quot;Sim&quot;</span><span class="p">)))</span>
+</pre></div>
+
+
+<p>Vamos agora criar uma variável que categoriza as idades em grupos? E que
+tal também categorizar o BMI?</p>
+<div class="codehilite"><pre><span></span><span class="n">banco</span> <span class="o">&lt;-</span> <span class="n">banco</span> <span class="o">%&gt;%</span> 
+  <span class="nf">mutate</span><span class="p">(</span><span class="n">categoria_idade</span> <span class="o">=</span> <span class="nf">case_when</span><span class="p">(</span><span class="n">Age</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="m">21</span><span class="o">:</span><span class="m">34</span><span class="p">)</span> <span class="o">~</span> <span class="s">&quot;21-34&quot;</span><span class="p">,</span>
+                                     <span class="n">Age</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="m">35</span><span class="o">:</span><span class="m">49</span><span class="p">)</span> <span class="o">~</span> <span class="s">&quot;35-49&quot;</span><span class="p">,</span>
+                                     <span class="n">Age</span> <span class="o">&gt;=</span> <span class="m">50</span> <span class="o">~</span> <span class="s">&quot;50 ou mais&quot;</span><span class="p">),</span>
+         <span class="n">categoria_bmi</span> <span class="o">=</span> <span class="nf">case_when</span><span class="p">(</span><span class="n">BMI</span> <span class="o">&lt;</span> <span class="m">18.5</span> <span class="o">~</span> <span class="s">&quot;Underweight&quot;</span><span class="p">,</span>
+                                   <span class="n">BMI</span> <span class="o">&gt;=</span> <span class="m">18.5</span> <span class="o">&amp;</span> <span class="n">BMI</span> <span class="o">&lt;</span> <span class="m">25</span> <span class="o">~</span> <span class="s">&quot;Normal weight&quot;</span><span class="p">,</span>
+                                   <span class="n">BMI</span> <span class="o">&gt;=</span> <span class="m">25</span> <span class="o">&amp;</span> <span class="n">BMI</span> <span class="o">&lt;</span> <span class="m">30</span> <span class="o">~</span> <span class="s">&quot;Overweight&quot;</span><span class="p">,</span>
+                                   <span class="n">BMI</span> <span class="o">&gt;=</span> <span class="m">30</span> <span class="o">&amp;</span> <span class="n">BMI</span> <span class="o">&lt;</span> <span class="m">35</span> <span class="o">~</span> <span class="s">&quot;Obesity Class 1&quot;</span><span class="p">,</span>
+                                   <span class="n">BMI</span> <span class="o">&gt;=</span> <span class="m">35</span> <span class="o">&amp;</span> <span class="n">BMI</span> <span class="o">&lt;</span> <span class="m">40</span>  <span class="o">~</span> <span class="s">&quot;Obesity Class 2&quot;</span><span class="p">,</span>
+                                   <span class="n">BMI</span> <span class="o">&gt;=</span> <span class="m">40</span> <span class="o">~</span> <span class="s">&quot;Extreme Obesity Class 3&quot;</span><span class="p">),</span>
+         <span class="n">categoria_idade</span> <span class="o">=</span> <span class="nf">factor</span><span class="p">(</span><span class="n">categoria_idade</span><span class="p">,</span> <span class="n">levels</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;21-34&quot;</span><span class="p">,</span> <span class="s">&quot;35-49&quot;</span><span class="p">,</span> <span class="s">&quot;50 ou mais&quot;</span><span class="p">)),</span>
+         <span class="n">categoria_bmi</span> <span class="o">=</span> <span class="nf">factor</span><span class="p">(</span><span class="n">categoria_bmi</span><span class="p">,</span> <span class="n">levels</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;Underweight&quot;</span><span class="p">,</span> <span class="s">&quot;Normal weight&quot;</span><span class="p">,</span> <span class="s">&quot;Overweight&quot;</span><span class="p">,</span> <span class="s">&quot;Obesity Class 1&quot;</span><span class="p">,</span>
+                                <span class="s">&quot;Obesity Class 2&quot;</span><span class="p">,</span> <span class="s">&quot;Extreme Obesity Class 3&quot;</span><span class="p">)))</span>
+</pre></div>
+
+
+<div class="admonition warning">
+<p class="admonition-title"> Instalando pacotes </p>
+<p>Preste atenção se você escreveu corretamente e não esqueceu da vírgula.</p>
+</div>
+<p>Agora que alteramos e criamos algumas variáveis vamos conhecer o
+<code class="codehilite"><span class="n">ggplot2</span></code>.</p>
+<h2 id="ggplot2">ggplot2<a class="headerlink" href="#ggplot2" title="Permanent link">&para;</a></h2>
+<p>O ggplot2 é um pacote baseado no que se chamou Grammar of Graphics (por
+isso gg antes do plot2), que nada mais é do que uma estrutura
+(framework) para realização de gráficos, que nós também chamamos de
+“plot”. Além disso, o Grammar of Graphics tem o seguinte principio:</p>
+<div class="admonition question">
+<p class="admonition-title"> Layers </p>
+<p>Gráficos são construídos com diferentes <strong>layers</strong></p>
+</div>
+<p>Mas o que são <strong>layers</strong>? Layers são elementos (ou componentes)
+gramáticais utilizados para fazer um plot. Estes componentes são
+importantes para determinar a representação dos dados. Como o Hadley
+Wickham apontou em um artigo chamado “A layered grammar of graphics”
+(2010), a associação destes layers com uma certa grámatica auxilia o
+usuário em atualizar e contruir gráficos com uma facilidade maior.</p>
+<p>Os elementos gramáticais que temos no <code class="codehilite"><span class="n">ggplot2</span></code> são:</p>
+<ol>
+<li>
+<p>Data - O dado que será plotado, mapeando as variáveis de interesse.</p>
+</li>
+<li>
+<p>Aesthetics - A escala em que o dado será plotado, sinalizando os
+    eixos x e y, cor, tamanho, preenchimento e etc.</p>
+</li>
+<li>
+<p>Geom - Estrutura que será utilizada nos seus dados, como por
+    exemplo, gráfico de dispersão, linha, boxplot e etc.</p>
+</li>
+<li>
+<p>Facets - plotar multiplos grupos</p>
+</li>
+<li>
+<p>Stats - Transformações estatísticas</p>
+</li>
+<li>
+<p>Coordinates System - O espaço no qual o dado sera plotado, como por
+    exemplo, espaço cartesiano, polar e entre outros.</p>
+</li>
+<li>
+<p>Theme - Controle e modificação de aparência de tudo que não diz
+    respeito ao dado utilizado.</p>
+</li>
+<li>
+<p>Scales - Para cada Aesthetics, descreve como a característica visual
+    é convertida em valores, como por exemplo, escala por tamanho, cor e
+    etc.</p>
+</li>
+</ol>
+<p>É muito importante destacar que <strong>as camadas (layers) podem aparecer em
+qualquer sequencia ao fazermos um gráfico e que a única camada
+necessária para começar um gráfico é a partir da função ggplot()</strong>.</p>
+<p><img alt="" src="https://raw.githubusercontent.com/p4hUSP/workshops_2018.2/master/imgs/w3_03.png" />
+<center>
+Os layers do ggplot2 (Fonte: DataCamp)
+</center>
+Como fazer um gráfico no <code class="codehilite"><span class="n">ggplot2</span></code></p>
+<hr />
+<p>Vamos fazer um exercício de imaginação? Como nós faríamos um gráfico sem
+o R? Que tal um papel? Qual o passo a passo que poderíamos fazer?</p>
+<p><br/></p>
+<p>No R é semelhante. Primeiro precisamos de um papel:</p>
+<div class="codehilite"><pre><span></span><span class="n">ggplot</span><span class="p">()</span>
+</pre></div>
+
+
+<p>Depois, nós precisamos decidir que dados iremos utilizar e quam vai ser
+o eixo x e o eixo y.</p>
+<div class="codehilite"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="k">data</span> <span class="o">=</span> <span class="n">banco</span><span class="p">,</span> <span class="n">mapping</span> <span class="o">=</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">BMI</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">DiabetesPedigreeFunction</span><span class="p">))</span>
+</pre></div>
+
+
+<p>Em seguida, escolhemos qual é melhor forma /estrutura para visualizar os
+dados.</p>
+<div class="codehilite"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="k">data</span> <span class="o">=</span> <span class="n">banco</span><span class="p">,</span> <span class="n">mapping</span> <span class="o">=</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">BMI</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">DiabetesPedigreeFunction</span><span class="p">))</span> <span class="o">+</span> 
+  <span class="n">geom_point</span><span class="p">()</span>
+</pre></div>
+
+
+<div class="admonition question">
+<p class="admonition-title"> Qual é a diferença do + para o %&gt;% </p>
+<p>Como vimos o pipe serve para deixarmos a linguagem mais linear, servindo como um conector entre as funções, porém isso não funciona com o <code class="codehilite"><span class="n">ggplot2</span></code>. O motivo pode ser pensado até de forma mais intuitiva: No ggplot2 estamos adicionando camadas com o sinal de mais enquanto com o <code class="codehilite"><span class="c">%&gt;%</span></code> estamos dando uma sequência de ações, isto é, funções.</p>
+</div>
+<p>Simples, não? Apesar disso, precisamos entender alguns conceitos que
+vimos ao montar este gráfico, como por exemplo, colocamos os eixos x e y
+dentro de uma função chamada <code class="codehilite"><span class="n">aes</span><span class="p">()</span></code>. Ela é uma função responsável pela
+propriedade visual dos objetos no gráfico, em outras palavras, ela faz o
+“mapeamento” das variáveis do nosso banco de dados para que eles possam
+fazer parte dos elementos visuais do gráfico.</p>
+<div class="codehilite"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="k">data</span> <span class="o">=</span> <span class="n">banco</span><span class="p">,</span> <span class="n">mapping</span> <span class="o">=</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">BMI</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">DiabetesPedigreeFunction</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">categoria_idade</span><span class="p">))</span> <span class="o">+</span> 
+  <span class="n">geom_point</span><span class="p">()</span>
+</pre></div>
+
+
+<p>Perceba que o <code class="codehilite"><span class="n">color</span> <span class="o">=</span> <span class="n">categoria_idade</span></code> afeta o <code class="codehilite"><span class="n">geom</span></code> que utilizamos de
+acordo com a variável de interesse, mas veremos adiante que também
+podemos alterar tanto um <code class="codehilite"><span class="n">geom</span></code> especificamente, quanto a cor do
+gráfico.</p>
+<p>Vamos ver outros <code class="codehilite"><span class="n">geom_</span></code>?</p>
+<h3 id="geom95col">geom_col()<a class="headerlink" href="#geom95col" title="Permanent link">&para;</a></h3>
+<p>Para fazer este geom, eu vou manipular a base de dados para contar
+quantos são aqueles que possuem diabetes. Além disso, vou chamar essa
+nova tabela de <code class="codehilite"><span class="n">tab1</span></code></p>
+<div class="codehilite"><pre><span></span><span class="c1"># chame esta tabela de banco para que possamos fazer outras manipulações</span>
+<span class="n">tab1</span> <span class="o">&lt;-</span> <span class="n">banco</span> <span class="o">%&gt;%</span> 
+  <span class="nf">group_by</span><span class="p">(</span><span class="n">Outcome</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+  <span class="nf">summarise</span><span class="p">(</span><span class="n">n</span> <span class="o">=</span> <span class="nf">n</span><span class="p">())</span>
+
+<span class="n">tab1</span>
+</pre></div>
+
+
+<p>Vamos para o geom_col()</p>
+<div class="codehilite"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="k">data</span> <span class="o">=</span> <span class="n">tab1</span><span class="p">,</span> <span class="n">mapping</span> <span class="o">=</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">Outcome</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">n</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_col</span><span class="p">()</span>
+</pre></div>
+
+
+<p>Vamos brincar um pouco com os argumentos estéticos que o ggplot2
+permite?</p>
+<div class="codehilite"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="k">data</span> <span class="o">=</span> <span class="n">tab1</span><span class="p">,</span> <span class="n">mapping</span> <span class="o">=</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">Outcome</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">n</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_col</span><span class="p">(</span><span class="n">fill</span> <span class="o">=</span> <span class="ss">&quot;red&quot;</span><span class="p">,</span> <span class="n">width</span> <span class="o">=</span> <span class="mi">0</span><span class="p">.</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+
+
+<h4 id="exercicio_1">Exercício<a class="headerlink" href="#exercicio_1" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Aplique os parâmetros para mudar a cor (color), o tamanho (size) e o
+    formato (shape) dos pontos do gráfico abaixo:</li>
+</ol>
+<!-- -->
+
+<div class="codehilite"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="k">data</span> <span class="o">=</span> <span class="n">banco</span><span class="p">,</span> <span class="n">mapping</span> <span class="o">=</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">Age</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">BloodPressure</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_point</span><span class="p">()</span>
+</pre></div>
+
+
+<h3 id="geom95histogram">geom_histogram()<a class="headerlink" href="#geom95histogram" title="Permanent link">&para;</a></h3>
+<p>Se quisermos ver a distribuição de uma variável quantitativa, podemos
+utilizar o <code class="codehilite"><span class="n">geom_histogram</span><span class="p">()</span></code>! Qual será a distribuição da variável
+SkinThickness?</p>
+<div class="codehilite"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">banco</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">SkinThickness</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_histogram</span><span class="p">(</span><span class="n">bins</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Lembre-se que também podemos colocar outros atribuitos estéticos!</p>
+<div class="codehilite"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">banco</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">SkinThickness</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_histogram</span><span class="p">(</span><span class="n">bins</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="ss">&quot;blue&quot;</span><span class="p">,</span> <span class="n">fill</span> <span class="o">=</span> <span class="ss">&quot;green&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+<h3 id="geom95boxplot-e-geom95violin">geom_boxplot() e geom_violin()<a class="headerlink" href="#geom95boxplot-e-geom95violin" title="Permanent link">&para;</a></h3>
+<p>Se nós tivermos uma variável quantitativa e qualitativa, podemos
+utilizar o <code class="codehilite"><span class="n">geom_boxplot</span></code> e o <code class="codehilite"><span class="n">geom_violin</span></code>! Qual a distribuição do
+speechiness por album?</p>
+<div class="codehilite"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">banco</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">categoria_bmi</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">Glucose</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_boxplot</span><span class="p">(</span><span class="n">fill</span> <span class="o">=</span> <span class="ss">&quot;#444054&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="ss">&quot;#cc3f0c&quot;</span><span class="p">)</span>
+
+<span class="n">ggplot</span><span class="p">(</span><span class="n">banco</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">categoria_bmi</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">Glucose</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_violin</span><span class="p">(</span><span class="n">fill</span> <span class="o">=</span> <span class="ss">&quot;#8c1c13&quot;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+
+<h3 id="geom95line">geom_line()<a class="headerlink" href="#geom95line" title="Permanent link">&para;</a></h3>
+<p>Para esses exemplo vamos criar a tabela abaixo primeiro:</p>
+<div class="codehilite"><pre><span></span><span class="n">tab2</span> <span class="o">&lt;-</span> <span class="n">banco</span> <span class="o">%&gt;%</span> 
+  <span class="nf">group_by</span><span class="p">(</span><span class="n">categoria_idade</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+  <span class="nf">summarise</span><span class="p">(</span><span class="n">media_gravidez</span> <span class="o">=</span> <span class="nf">mean</span><span class="p">(</span><span class="n">Pregnancies</span><span class="p">))</span>
+</pre></div>
+
+
+<p>Apesar de mais utilizado para séries temporais, podemos utilizar um
+gráfico de linhas para pensar na diferença presente nas idades quanto a
+média de gravidez.</p>
+<div class="codehilite"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="k">data</span> <span class="o">=</span> <span class="n">tab2</span><span class="p">,</span> <span class="n">mapping</span> <span class="o">=</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">categoria_idade</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">media_gravidez</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_line</span><span class="p">(</span><span class="k">group</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+
+<h4 id="exercicio_2">Exercício<a class="headerlink" href="#exercicio_2" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Incluia um geom_point() no gráfico acima e altere sua cor de acordo
+    com cada categorização de idade.</li>
+</ol>
+<p>E se quisermos mudar a cor da categorização para algo que gostamos mais?
+Para fazer isso vamos incluir mais uma camada no nosso gráfico, a camada
+de scale.</p>
+<div class="admonition question">
+<p class="admonition-title"> Combinando cores </p>
+<p>Se você tem dúvida de qual cor pode combinar melhor com outra, tem um <a href="https://coolors.co/app">site</a> bem bacana que pode te ajudar nisso.</p>
+<p>ggplot(data = tab2, mapping = aes(x = categoria_idade, y = media_gravidez)) + geom_line(group = 1) + geom_point(aes(color = categoria_idade), size = 10) + scale_color_manual(values = c("#ff1053", "#6c6ea0", "#66c7f4"))</p>
+</div>
+<p>Neste caso utilizamos o <code class="codehilite"><span class="n">scale_color_manual</span></code> pois queriamos preencher as
+cores de acordo com o que colocamos no paramêtro <code class="codehilite"><span class="n">color</span></code>. Se tivessemos
+escolhido o <code class="codehilite"><span class="n">fill</span></code> teriamos que utilizar <code class="codehilite"><span class="n">scale_fill_manual</span></code>.</p>
+<div class="codehilite"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">banco</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">categoria_bmi</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">Glucose</span><span class="p">,</span> <span class="n">fill</span> <span class="o">=</span> <span class="n">categoria_bmi</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_boxplot</span><span class="p">(</span><span class="n">color</span> <span class="o">=</span> <span class="ss">&quot;#cc3f0c&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="n">scale_fill_manual</span><span class="p">(</span><span class="k">values</span> <span class="o">=</span> <span class="k">c</span><span class="p">(</span><span class="ss">&quot;#ff1053&quot;</span><span class="p">,</span> <span class="ss">&quot;#6c6ea0&quot;</span><span class="p">,</span> <span class="ss">&quot;#66c7f4&quot;</span><span class="p">,</span> <span class="ss">&quot;#3a606e&quot;</span><span class="p">,</span> <span class="ss">&quot;#7b4b94&quot;</span><span class="p">,</span> <span class="ss">&quot;#8a1c7c&quot;</span><span class="p">,</span> <span class="ss">&quot;#5bc0eb&quot;</span><span class="p">))</span>
+</pre></div>
+
+
+<p>O <code class="codehilite"><span class="n">ggplot2</span></code> também possibilita a utilização de outros sistemas de
+coordenadas, como por exemplo:</p>
+<ul>
+<li><code class="codehilite"><span class="n">coord_flip</span></code></li>
+</ul>
+<!-- -->
+
+<div class="codehilite"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="k">data</span> <span class="o">=</span> <span class="n">tab1</span><span class="p">,</span> <span class="n">mapping</span> <span class="o">=</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">Outcome</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">n</span><span class="p">,</span> <span class="n">fill</span> <span class="o">=</span> <span class="n">Outcome</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_col</span><span class="p">()</span> <span class="o">+</span> <span class="n">scale_fill_manual</span><span class="p">(</span><span class="k">values</span> <span class="o">=</span> <span class="k">c</span><span class="p">(</span><span class="ss">&quot;#ff1053&quot;</span><span class="p">,</span> <span class="ss">&quot;#6c6ea0&quot;</span><span class="p">))</span> <span class="o">+</span> <span class="n">coord_flip</span><span class="p">()</span>
+</pre></div>
+
+
+<ul>
+<li><code class="codehilite"><span class="n">coord_polar</span></code></li>
+</ul>
+<!-- -->
+
+<div class="codehilite"><pre><span></span><span class="n">tab3</span> <span class="o">&lt;-</span> <span class="n">banco</span> <span class="o">%&gt;%</span> 
+  <span class="nf">group_by</span><span class="p">(</span><span class="n">Outcome</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+  <span class="nf">summarise</span><span class="p">(</span><span class="n">n</span> <span class="o">=</span> <span class="nf">n</span><span class="p">())</span> <span class="o">%&gt;%</span> 
+  <span class="nf">mutate</span><span class="p">(</span><span class="n">p</span> <span class="o">=</span> <span class="n">n</span><span class="o">/</span><span class="nf">sum</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+
+<span class="nf">ggplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">tab3</span><span class="p">,</span> <span class="n">mapping</span> <span class="o">=</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="nf">factor</span><span class="p">(</span><span class="m">1</span><span class="p">),</span> <span class="n">y</span> <span class="o">=</span> <span class="n">p</span><span class="p">,</span> <span class="n">fill</span> <span class="o">=</span> <span class="n">Outcome</span><span class="p">))</span> <span class="o">+</span> <span class="nf">geom_col</span><span class="p">()</span> <span class="o">+</span> <span class="nf">scale_fill_manual</span><span class="p">(</span><span class="n">values</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;#ff1053&quot;</span><span class="p">,</span> <span class="s">&quot;#6c6ea0&quot;</span><span class="p">))</span> <span class="o">+</span> <span class="nf">coord_polar</span><span class="p">(</span><span class="n">theta</span> <span class="o">=</span> <span class="s">&#39;y&#39;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Dica: Tome cuidado com o <code class="codehilite"><span class="n">coord_polar</span></code>! Ás vezes, para não dizer sempre,
+eles podem dificultar a visualização dos dados, sobretudo, aqueles com
+muitas categorias.</p>
+<p>Antes de vermos gráficos de correlação, vamos dar um título para nosso
+gráfico?</p>
+<div class="codehilite"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="k">data</span> <span class="o">=</span> <span class="n">tab1</span><span class="p">,</span> <span class="n">mapping</span> <span class="o">=</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">Outcome</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">n</span><span class="p">,</span> <span class="n">fill</span> <span class="o">=</span> <span class="n">Outcome</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_col</span><span class="p">()</span> <span class="o">+</span> <span class="n">scale_fill_manual</span><span class="p">(</span><span class="k">values</span> <span class="o">=</span> <span class="k">c</span><span class="p">(</span><span class="ss">&quot;#ff1053&quot;</span><span class="p">,</span> <span class="ss">&quot;#6c6ea0&quot;</span><span class="p">))</span> <span class="o">+</span> <span class="n">coord_flip</span><span class="p">()</span> <span class="o">+</span>
+  <span class="n">labs</span><span class="p">(</span><span class="n">title</span> <span class="o">=</span> <span class="ss">&quot;Aproximadamente 1 a cada 3 tem diabetes&quot;</span><span class="p">,</span>
+       <span class="n">x</span> <span class="o">=</span> <span class="ss">&quot;Quantidade&quot;</span><span class="p">,</span> 
+       <span class="n">y</span> <span class="o">=</span> <span class="ss">&quot;Diabetes&quot;</span><span class="p">,</span>
+       <span class="n">caption</span> <span class="o">=</span> <span class="ss">&quot;Pima Diabetes&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+<h2 id="2-corrplot">2. corrplot<a class="headerlink" href="#2-corrplot" title="Permanent link">&para;</a></h2>
+<p>Muitas vezes precisamos analisar a correlação entre as variáveis e um
+dos melhores pacotes para isso é o <code class="codehilite"><span class="n">corrplot</span></code>. Vamos começar
+selecionando apenas as variáveis quantitativas.</p>
+<div class="codehilite"><pre><span></span><span class="n">tab4</span> <span class="o">&lt;-</span> <span class="n">banco</span> <span class="o">%&gt;%</span> 
+  <span class="nf">select</span><span class="p">(</span><span class="o">-</span><span class="n">Outcome</span><span class="p">,</span> <span class="o">-</span><span class="n">categoria_idade</span><span class="p">,</span> <span class="o">-</span><span class="n">categoria_bmi</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Vamos primeiro criar uma matriz de correlação e após isto podemos
+começar a criar nossos gráficos.</p>
+<div class="codehilite"><pre><span></span><span class="n">matriz_correlacao</span> <span class="o">&lt;-</span> <span class="nf">cor</span><span class="p">(</span><span class="n">tab4</span><span class="p">)</span>
+
+<span class="nf">corrplot</span><span class="p">(</span><span class="n">matriz_correlacao</span><span class="p">,</span> <span class="n">method</span> <span class="o">=</span> <span class="s">&#39;circle&#39;</span><span class="p">)</span>
+
+<span class="nf">corrplot</span><span class="p">(</span><span class="n">matriz_correlacao</span><span class="p">,</span> <span class="n">method</span> <span class="o">=</span> <span class="s">&#39;square&#39;</span><span class="p">)</span>
+
+<span class="nf">corrplot</span><span class="p">(</span><span class="n">matriz_correlacao</span><span class="p">,</span> <span class="n">method</span> <span class="o">=</span> <span class="s">&#39;number&#39;</span><span class="p">)</span>
+
+<span class="nf">corrplot</span><span class="p">(</span><span class="n">matriz_correlacao</span><span class="p">,</span> <span class="n">method</span> <span class="o">=</span> <span class="s">&#39;square&#39;</span><span class="p">,</span> <span class="n">type</span> <span class="o">=</span> <span class="s">&quot;upper&quot;</span><span class="p">)</span>
+
+<span class="nf">corrplot</span><span class="p">(</span><span class="n">matriz_correlacao</span><span class="p">,</span> <span class="n">method</span> <span class="o">=</span> <span class="s">&#39;square&#39;</span><span class="p">,</span> <span class="n">type</span> <span class="o">=</span> <span class="s">&quot;lower&quot;</span><span class="p">)</span>
+
+<span class="nf">corrplot.mixed</span><span class="p">(</span><span class="n">matriz_correlacao</span><span class="p">)</span>
+</pre></div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../03_transformar/" title="Transformando Dados" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Anterior
+                </span>
+                Transformando Dados
+              </span>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2019 Programação para Humanidades
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/p4husp" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://facebook.com/p4husp" class="md-footer-social__link fa fa-facebook"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.245445c6.js"></script>
+      
+        
+        
+          
+          <script src="../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+          
+            
+              
+              
+                <script src="../assets/javascripts/lunr/lunr.pt.js"></script>
+              
+            
+          
+          
+            <script src="../assets/javascripts/lunr/lunr.multi.js"></script>
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>
