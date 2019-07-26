@@ -1,0 +1,377 @@
+---
+title: "05_modelagem"
+author: "P4H"
+date: "7/24/2019"
+output: md_document
+---
+
+# Modelagem
+
+```{r global_options, include=FALSE}
+knitr::opts_chunk$set(fig.width=12,
+                      fig.height=8,
+                      warning=FALSE,
+                      message=FALSE,
+                      eval=FALSE)
+```
+
+Chegamos na última aula! Nesta aula veremos como aplicar testes e modelos para entender melhor o nosso conjunto de dados;
+
+Vamos utilizar a mesma base de dados da aula passada, isto é, a base de diabetes no povo Pima.
+
+- [Download do Banco](https://github.com/p4hUSP/material-bio/raw/master/docs/data/diabetes2.csv)
+
+Retomando, o banco de dados possuí 768 mulheres com 8 variáveis:
+
+| Variável                  | Descrição
+| ------------------------- | ---------
+| Pregnancies               | Número de gravidezes
+| Glucose                   | Concetração de plasma glucose
+| BloodPressure             | Pressão Sanguínea (mm Hg)
+| SkinThickness             | Espessura da dobra da pele do tríceps (mm)
+| Insulin                   | Insulina (mu U/ml)
+| BMI                       | Indíce de Massa corpórea (IMC)
+| DiabetesPedigreeFunction  | Diabetes pedigree function
+| Age                       | Idade (anos)
+| Outcome                   | Variável que indica de a pessoa tem ou não diabetes (1 = Sim, 0 = Não)
+
+Vamos incluir as varáveis dá última aula? Para isso complete as lacunas `___` do código abaixo!
+
+```{r}
+# install.packages("tidyverse")
+library(___)
+library(corrplot)
+
+banco <- read_("___.csv")
+
+banco <- ___ %>% 
+  mutate(Outcome = ___(Outcome, levels = c(0, 1), labels = c("Nao", "Sim")),
+         categoria_idade = ___(Age %in% c(21:34) ___ "21-34",
+                               Age %in% c(35:49) ___ "35-49",
+                               Age >= 50 ___ "50 ou mais"),
+         categoria_bmi = ___(BMI < 18.5 ___ "Underweight",
+                             BMI >= 18.5 & BMI < 25 ___ "Normal weight",
+                             BMI >= 25 & BMI < 30 ___ "Overweight",
+                             BMI >= 30 & BMI < 35 ___ "Obesity Class 1",
+                             BMI >= 35 & BMI < 40  ___ "Obesity Class 2",
+                             BMI >= 40 ~ "Extreme Obesity Class 3"),
+         categoria_idade = factor(categoria_idade, ___ = ___("21-34", "35-49", "50 ou mais")),
+         categoria_bmi = factor(categoria_bmi, ___ = ___("Underweight", "Normal weight", "Overweight", "Obesity Class 1",
+                                "Obesity Class 2", "Extreme Obesity Class 3")))
+```
+
+Agora que temos nosso banco de dados podemos começar a entendê-lo melhor.
+
+# Gráfico de correlação com o corrplot
+
+Muitas vezes precisamos saber como nossas variáveis de relacionam e uma alternativa para isso é calcular a correlação entre elas. O R possui funções prontas para tal e sobretudo, uma função que plota estas correlações de uma forma que fica mais facíl identificá-las. Para isso vamos primeiro:
+
+1. Criar uma matriz de correlação
+
+Como fazemos o cálculo da correlação apenas variáveis contínuas, precisamos primeiro remover as variáveis categóricas do nosso banco.
+
+```{r}
+tab1 <- banco %>% 
+  select(-Outcome, -categoria_idade, -categoria_bmi)
+```
+
+Após feito isso (e lembre-se que não alteramos o banco original), nós vamos aplicar a função `cor()` e logo em seguida a função `corrplot()`
+
+```{r}
+M <- cor(tab1)
+```
+
+```{r}
+corrplot(M)
+```
+
+E o mais legal desta função é que podemos brincar com seus parâmetros, como por exemplo, `method = ` e o `type = `.
+
+## Exercício 1
+
+Aplique os parâmetros `method` e `type` no código aboixo, utilizando como valores "number" e "upper".
+
+```{r}
+corrplot(M)
+```
+
+Podemos notar, portanto, que poucas variáveis apresentam uma correlação forte. As mais alta, neste caso também positivas, dentre as que temos no banco são:
+
+ - Age&BMI - `0.54`, 
+ 
+ - Insulin&BMI - `0.44`, 
+ 
+ - e BMI&SkinThickness - `0.39`.
+ 
+Vamos continuar a investigar mais os nossos dados? 
+
+# Inferência
+
+## 1. Regressão Linear
+
+Imagine que você, por exemplo, deseje explicar o peso do seu paciente, o nível de açucar no sangue, entre outras características que sejam relevantes para o seu estudo. Desde que a sua variável de interesse seja __contínua__, nós podemos utilizar a regressão linear para tentar explicar a variação dela.
+
+De maneira breve, tentamos estimar a seguinte função de tal maneira que a soma dos quadrados do resíduo seja a menor possível.
+
+$$
+Y = \beta_{0} + \beta_{1}X_{1} + \beta_{2}X_{2} + ... + \beta_{n}X_{n}
+$$
+
+Na prática, obtemos uma reta semelhante a da código abaixo.
+
+```{r}
+## Código Exemplo Para Visualizarmos uma Regressão
+tibble(x = rnorm(300),
+       y = (2 * x) + rnorm(300)) %>% 
+  ggplot(mapping = aes(x = x, y = y)) + 
+  geom_point(alpha = 0.5) +
+  geom_smooth(method = 'lm', se = FALSE, size = 2, color = 'darkblue') +
+  labs(x = 'Variável Explicativa',
+       y = 'Variável Explicada')
+```
+
+No código acima, a reta em azul escuro representa a reta de regressão. Imagine que ela seja o ponto médio `y` para cada ponto da variável `x`.
+
+No nosso banco, temos a variável `Glucose` e `Insulin` que representam, respectivamente, a concentração de plasma glucose no sangue e a concentração de insulina. Faz sentido explicar a `Glucose` a partir da `Insulin`?
+
+Porém, antes de rodar uma regressão, vamos visualizar os a relação entre as variáveis.
+
+```{r}
+banco %>% 
+  ggplot(mapping = aes(x = Insulin, y = Glucose)) +
+  geom_point() + 
+  geom_smooth(method = 'lm')
+```
+
+Uhmmmm... Parece que temos um problema, não? Você sabe dizer qual é?
+
+Se você olhar para o canto esquerdo do gráfico, irá reparar em uma concentração em torno do 0. Embora não seja na mesma quantidade, a concentração de plasma glucose 0 também não faz sentido. Tendo isso em vista, esses valores devem ser considerados como _missing_.
+
+```{r}
+banco <- banco %>% 
+  mutate(Insulin = ifelse(Insulin == 0, NA, Insulin),
+         Glucose = ifelse(Glucose == 0, NA, Glucose))
+```
+
+Novamente, vamos _plotar_ a relação entre as variáveis.
+
+```{r}
+banco %>% 
+  ggplot(mapping = aes(x = Insulin, y = Glucose)) +
+  geom_point() + 
+  geom_smooth(method = 'lm')
+```
+
+Parece que agora estamos prontos para rodar a nossa regressão linear. No R, podemos utilizar a função `lm()` (_Linear Model_) para estimar os coeficientes.
+
+```{r}
+lm(Glucose ~ Insulin, banco)
+```
+
+Ela retorna para a gente os coeficientes estimados que podemos colocar na nossa fórmula da regressão linear.
+
+$$
+\hat{y} = 0.15x + 99.09
+$$
+
+Basicamente, ela nos informa que para cada __uma unidade de insulina__ a mais, nós obtemos 0.15 unidades de plasma glucose. Caso a insulina fosse 0 (embora isso não seja possível), obteríamos 99.09 como valor de plasma glucose.
+
+```{r}
+ggplot(data = banco, mapping = aes(x = Insulin, y = Glucose)) + 
+  geom_point() +
+  geom_abline(slope = 0.15, intercept = 99.09, color = 'darkblue', size = 2)
+```
+
+Porém, como nós obtemos esses valores a partir de uma amostra, é necessário que testemos os coeficientes para ver se eles são estatísticamente diferentes de 0, ou seja, precisamos testar se `Insulin` realmente tem uma relação com `Glucose` ou se talvez seja apenas uma relação aleatória.
+
+```{r}
+modelo1 <- lm(Glucose ~ Insulin, banco)
+
+summary(modelo1)
+```
+
+Nós podemos adicionar mais variáveis
+
+```{r}
+modelo2 <- lm(Glucose ~ Insulin + BloodPressure, banco)
+
+summary(modelo2)
+```
+
+## 2. Regressão Logística
+
+Lembre-se que a regressão linear possui pressupostos que a impedem de ser utilizada para explicar variáveis categóricas. Para isso precisamos utilizar a regressão logística. No R, ela pode ser estimada com a função `glm()` (_Generalized Linear Models_).
+
+```{r}
+modelo3 <- glm(Outcome ~ Glucose, family = binomial, data = banco)
+
+summary(modelo3)
+```
+
+```{r}
+coef(modelo3) %>% 
+  exp()
+```
+
+## Associação entre variáveis categóricas
+
+### Qui-Quadrado
+
+Veremos como aplicar um teste qui-quadrado a partir do pacote `infer`, porém antes vamos entender quais são as características deste teste:
+
+- A estatística teste é dada por:
+
+$$
+{\chi}^2=\sum_{k=1}^{n} \frac{(O_k - E_k)^2}{E_k}
+$$
+
+Em que, $O_k$ é a frequência observada de uma categoria e $E_k$ é a frequência esperada.
+
+- Teste de independência de duas variáveis categóricas.
+
+> Duas variáveis categóricas são estatisticamente independentes se as distribuições condicionais da população em uma delas são idênticas a cada categoria da outra. As variáveis são estatisticamente dependentes se as distribuições condicionais não são idênticas. (Agresti & Finlay, 254)
+
+- Teste não paramétrico (não depende de parâmetros populacionais, como média e variância)
+
+- Hipótese nula: Não há associação entre os grupos (As variáveis são independentes)
+
+- Hipótese alternativa: Existe associação entre os grupos (As variáveis são dependentes)
+
+Para aplicar este teste é simples, basta aplicarmos a função `chisq_test()` do pacote `infer` assim como vemos abaixo:
+
+```{r}
+# install.packages("infer")
+library(infer)
+
+qui_quadrado <- chisq_test(banco, formula =  Outcome ~ categoria_idade)
+```
+
+Concluímos que falhamos ao rejeitar a hipótese nula, logo, temos uma indicação de que existe associação entre idade e a pessoa ter diabetes ou não.
+
+Porém antes de avançarmos, vamos pensar uma coisa: Qual a diferença entre a função `chisq_test()` do pacote `infer` e `chisq.test` que vem no R base?
+
+Se rodarmos a linha abaixo, vamos perceber que a função do R base retorna uma lista, incluse com diversas saídas, como por exmeplo, as frequências observadas, esperada e os resíduos, que é dada pela diferença ($O_k - E_k$). Isto difere da função do `infer`
+
+```{r}
+qui_quadrado2 <- chisq.test(banco$Outcome, banco$categoria_idade)
+
+qui_quadrado2[["residuals"]]
+
+qui_quadrado2[["observed"]]
+
+qui_quadrado2[["expected"]]
+```
+
+## Teste de médias
+
+### Teste T 
+
+O Teste T tem como objetivo determinar se a média de dois grupos são iguais. E ele parte do pressuposto que ambos os grupos tem seguem uma distribuição normal com mesma variância. Vamos testar com a variável BMI.
+
+```{r}
+banco <- banco %>% 
+  mutate(BMI = ifelse(BMI == 0, NA, BMI))
+
+ggplot(data = banco, aes(x = BMI)) + 
+  geom_density() +
+  facet_grid(~ Outcome)
+```
+
+A princípio podemos pensar que sim, porém ao executarmos um teste de normalidade (Shapiro-Wilk) vemos que não podemos afirmar se tratar de uma normal. Este teste tem como hipóteses:
+
+- Hipótese Nula: Os dados seguem uma distribuição normal.
+
+- Hipótese Alternativa: Os dados não seguem uma distribuição normal.
+
+```{r}
+outcome_sim <- banco %>% filter(Outcome == "Sim")
+outcome_nao <- banco %>% filter(Outcome == "Nao")
+
+
+shapiro.test(outcome_sim$BMI)
+
+shapiro.test(outcome_nao$BMI)
+```
+
+Sendo assim, falhamos ao rejeitar a hipótese nula, porém para fins didáticos vamos continuar a aplicar o teste, uma vez que as variâncias são iguais, como podemos notar no código abaixo.
+
+```{r}
+outcome_sim$BMI %>% var(na.rm = T)
+outcome_nao$BMI %>% var(na.rm = T)
+```
+
+Logo, sabendo que as hipóteses de um teste t são:
+
+- Hipótese Nula: as médias são iguais.
+
+- Hipótese Alternativa: as médias são diferentes.
+
+Aplicamos este teste utilizando a função `t.test()`:
+
+```{r}
+t.test(outcome_sim$BMI, outcome_nao$BMI)
+```
+
+# Bônus: Bootstraping para criar intervalos de confiança
+
+Um método muito comum para construírmos IC de estimativas de proporção é o bootstraping. A ideia, em linhas gerais, é de que a inferência sobre a população a partir da amostra pode ser modelada a partir de reamostragem da amostra e assim realizando uma inferência sobre a amostra a partir da reamostragem.
+
+```{r}
+# install.packages("infer")
+library(infer)
+
+p_hat <- banco %>% 
+  group_by(Outcome) %>% 
+  summarise(n = n()) %>% 
+  mutate(p = n/sum(n)) %>% 
+  filter(Outcome == "Sim") %>% 
+  select(p)
+
+p_hat <- p_hat$p
+
+boot <- banco %>% 
+  specify(response = Outcome,
+          success = "Sim") %>% 
+  generate(reps = 500,
+           type = "bootstrap") %>% 
+  calculate(stat = "prop")
+
+SE <- boot %>% 
+  summarise(sd = sd(stat))
+SE <- SE$sd
+
+c(p_hat - 2 * SE, p_hat + 2 * SE)
+
+iterar <- c(2, 3, 5, 20, 30, 50 ,100, 200, 500)
+ICs <- list()
+for(i in 1:length(iterar)){
+  boot <- banco %>% 
+  specify(response = Outcome,
+          success = "Sim") %>% 
+  generate(reps = iterar[i],
+           type = "bootstrap") %>% 
+  calculate(stat = "prop")
+  
+  SE <- boot %>% 
+  summarise(sd = sd(stat))
+  SE <- SE$sd
+  
+  ICs[[i]] <- c(p_hat - 1.96 * SE, p_hat + 1.96 * SE)
+  
+}
+
+boot_data <- tibble()
+for (i in 1:length(ICs)) {
+  lower <- ICs[[i]][[1]]
+  upper <- ICs[[i]][[2]]
+  data <- tibble(lower = lower, upper = upper, reps = iterar[i], p_hat = p_hat)
+  boot_data <- bind_rows(boot_data, data)
+}
+
+ggplot(boot_data,aes(y = p_hat, )) + geom_pointrange(aes(ymin = lower, ymax = upper, x = reps)) + coord_flip() + theme_minimal() + 
+  scale_y_continuous(limits = c(boot_data %>% select(lower) %>% pull() %>% min(),
+                                boot_data %>% select(upper) %>% pull() %>% max()),
+                     breaks = seq(boot_data %>% select(lower) %>% pull() %>% min() - 0.05,
+                                boot_data %>% select(upper) %>% pull() %>% max() + 0.05, 0.02))
+```
+
